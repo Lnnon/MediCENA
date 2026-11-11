@@ -38,6 +38,7 @@ import OutbreakAnalyticsPage, { OutbreakAnalyticsDetailPage } from '../shared/Ou
 import ForecastPanel from '../shared/ForecastPanel'
 import NotificationsPage from '../shared/NotificationsPage'
 import ReportsPage from '../shared/ReportsPage'
+import pollWhileVisible from '../shared/pollWhileVisible'
 import CHOReferralMonitoring from './CHOReferralMonitoring'
 import CHOMedicineMonitoring from './CHOMedicineMonitoring'
 import './CHOStyle.css'
@@ -74,6 +75,8 @@ const saveSeenIds = (key, ids) => {
 function CHODashboard({ onLogout }) {
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [page, setPage] = useState('dashboard')
+  const showOverview = page === 'dashboard'
+  const showTrackedReferrals = showOverview || ['patients', 'trackPatients', 'incoming', 'referred'].includes(page)
   const [analyticsDetailType, setAnalyticsDetailType] = useState('gis-cases')
   const [trackFocusPatientId, setTrackFocusPatientId] = useState(null)
   const [medicineRequests, setMedicineRequests] = useState([])
@@ -132,6 +135,7 @@ function CHODashboard({ onLogout }) {
   }, [])
 
   useEffect(() => {
+    if (!showOverview) return
     let isMounted = true
 
     const loadDashboardData = async () => {
@@ -147,16 +151,16 @@ function CHODashboard({ onLogout }) {
       setOnlineUsers(backendOnlineUsers)
     }
 
-    loadDashboardData()
-    const intervalId = window.setInterval(loadDashboardData, 10000)
+    const stopPolling = pollWhileVisible(loadDashboardData, 10000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
-  }, [])
+  }, [showOverview])
 
   useEffect(() => {
+    if (!showOverview) return
     let isMounted = true
 
     const loadDistributionQueue = async () => {
@@ -165,16 +169,16 @@ function CHODashboard({ onLogout }) {
       setDistributionQueue(backendQueue)
     }
 
-    loadDistributionQueue()
-    const intervalId = window.setInterval(loadDistributionQueue, 3000)
+    const stopPolling = pollWhileVisible(loadDistributionQueue, 15000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
-  }, [])
+  }, [showOverview])
 
   useEffect(() => {
+    if (!showOverview) return
     let isMounted = true
 
     const loadMonitoringPreviews = async () => {
@@ -188,31 +192,16 @@ function CHODashboard({ onLogout }) {
       setAnalyticsPreview(backendAnalyticsPreview)
     }
 
-    loadMonitoringPreviews()
-    const intervalId = window.setInterval(loadMonitoringPreviews, 15000)
+    const stopPolling = pollWhileVisible(loadMonitoringPreviews, 15000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
-  }, [])
+  }, [showOverview])
 
   useEffect(() => {
-    let isMounted = true
-
-    const pollNotifications = async () => {
-      if (isMounted) {
-        await loadBackendNotifications()
-      }
-    }
-
-    pollNotifications()
-    const intervalId = window.setInterval(pollNotifications, 5000)
-
-    return () => {
-      isMounted = false
-      window.clearInterval(intervalId)
-    }
+    return pollWhileVisible(loadBackendNotifications, 5000)
   }, [loadBackendNotifications])
 
   useEffect(() => {
@@ -257,12 +246,11 @@ function CHODashboard({ onLogout }) {
       }
     }
 
-    loadIncomingNotifications()
-    const intervalId = window.setInterval(loadIncomingNotifications, 5000)
+    const stopPolling = pollWhileVisible(loadIncomingNotifications, 5000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
   }, [addNotification, seenIncomingKey])
 
@@ -310,16 +298,16 @@ function CHODashboard({ onLogout }) {
       }
     }
 
-    loadMedicineRequests()
-    const intervalId = window.setInterval(loadMedicineRequests, 5000)
+    const stopPolling = pollWhileVisible(loadMedicineRequests, 5000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
   }, [addNotification, seenMedicineKey])
 
   useEffect(() => {
+    if (!showTrackedReferrals) return
     let isMounted = true
 
     const loadTrackedReferrals = async () => {
@@ -336,14 +324,13 @@ function CHODashboard({ onLogout }) {
       }
     }
 
-    loadTrackedReferrals()
-    const intervalId = window.setInterval(loadTrackedReferrals, 3000)
+    const stopPolling = pollWhileVisible(loadTrackedReferrals, 3000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
-  }, [])
+  }, [showTrackedReferrals])
 
   const handleNotificationOpen = async (notification) => {
     setNotifications((currentNotifications) =>

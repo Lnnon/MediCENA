@@ -33,6 +33,7 @@ import OutbreakAnalyticsPage, { OutbreakAnalyticsDetailPage } from '../shared/Ou
 import NotificationsPage from '../shared/NotificationsPage'
 import ProfilePage from '../shared/ProfilePage'
 import ReportsPage from '../shared/ReportsPage'
+import pollWhileVisible from '../shared/pollWhileVisible'
 import './BHCStyle.css'
 import './BHCWorkspacePages.css'
 import '../cho/CHOStyle.css'
@@ -92,6 +93,7 @@ const formatShortDate = (value) => {
 
 function BHCDashboard({ onLogout }) {
   const [page, setPage] = useState('dashboard')
+  const showOverview = page === 'dashboard'
   const [analyticsDetailType, setAnalyticsDetailType] = useState('gis-cases')
   const [submittedReferrals, setSubmittedReferrals] = useState([])
   const [medicineRequests, setMedicineRequests] = useState([])
@@ -125,6 +127,7 @@ function BHCDashboard({ onLogout }) {
   }, [])
 
   useEffect(() => {
+    if (!showOverview) return
     let isMounted = true
 
     const loadMonitoringPreviews = async () => {
@@ -138,14 +141,13 @@ function BHCDashboard({ onLogout }) {
       setAnalyticsPreview(backendAnalyticsPreview)
     }
 
-    loadMonitoringPreviews()
-    const intervalId = window.setInterval(loadMonitoringPreviews, 15000)
+    const stopPolling = pollWhileVisible(loadMonitoringPreviews, 15000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
-  }, [])
+  }, [showOverview])
   const loadBackendNotifications = useCallback(async () => {
     try {
       const backendNotifications = await fetchNotifications()
@@ -156,6 +158,7 @@ function BHCDashboard({ onLogout }) {
   }, [])
 
   useEffect(() => {
+    if (!showOverview) return
     let isMounted = true
 
     const loadDashboardData = async () => {
@@ -169,31 +172,16 @@ function BHCDashboard({ onLogout }) {
       setInventory(backendInventory)
     }
 
-    loadDashboardData()
-    const intervalId = window.setInterval(loadDashboardData, 10000)
+    const stopPolling = pollWhileVisible(loadDashboardData, 10000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
-  }, [])
+  }, [showOverview])
 
   useEffect(() => {
-    let isMounted = true
-
-    const pollNotifications = async () => {
-      if (isMounted) {
-        await loadBackendNotifications()
-      }
-    }
-
-    pollNotifications()
-    const intervalId = window.setInterval(pollNotifications, 5000)
-
-    return () => {
-      isMounted = false
-      window.clearInterval(intervalId)
-    }
+    return pollWhileVisible(loadBackendNotifications, 5000)
   }, [loadBackendNotifications])
 
   useEffect(() => {
@@ -236,12 +224,11 @@ function BHCDashboard({ onLogout }) {
       }
     }
 
-    loadReferrals()
-    const intervalId = window.setInterval(loadReferrals, 5000)
+    const stopPolling = pollWhileVisible(loadReferrals, 5000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
   }, [addNotification])
 
@@ -285,12 +272,11 @@ function BHCDashboard({ onLogout }) {
       }
     }
 
-    loadMedicineRequests()
-    const intervalId = window.setInterval(loadMedicineRequests, 5000)
+    const stopPolling = pollWhileVisible(loadMedicineRequests, 5000)
 
     return () => {
       isMounted = false
-      window.clearInterval(intervalId)
+      stopPolling()
     }
   }, [addNotification])
 
