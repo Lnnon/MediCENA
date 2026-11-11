@@ -1,0 +1,87 @@
+/* Staff pages retain their existing layouts and account-management behavior. */
+.cho-staff-styled .cho-online-page { grid-template-columns:minmax(0,1fr) 300px; gap:20px; align-items:start; }
+.cho-staff-styled .cho-online-main { min-width:0; }
+.cho-staff-styled .cho-online-summary { padding:20px; }
+.cho-staff-styled .cho-online-summary h2 { margin:0 0 16px; }
+.cho-staff-styled .cho-online-stat-list { display:flex; flex-wrap:wrap; gap:12px; }
+.cho-staff-styled .cho-online-stat-list > div { flex:1 1 130px; min-width:0; }
+.cho-staff-styled .cho-online-staff-grid { grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr)); gap:14px; }
+.cho-staff-styled .cho-online-staff-card header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.cho-staff-styled .cho-online-staff-card header strong { font-size:13px; overflow-wrap:anywhere; }
+.cho-staff-styled .cho-online-staff-card header span { font-size:10px; white-space:normal; }
+.cho-staff-styled .cho-online-contact { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.cho-staff-styled .cho-online-contact > span { min-width:0; overflow-wrap:anywhere; }
+.cho-staff-styled .cho-online-staff-card footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.cho-staff-styled .cho-online-staff-card footer time { font-size:10px; }
+.cho-staff-styled .cho-online-patients { padding:18px; min-width:0; }
+.cho-staff-styled .cho-online-patients header { display:grid; gap:14px; }
+.cho-staff-styled .cho-online-patients header > div { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.cho-staff-styled .cho-online-patients header h2 { margin:0; }
+.cho-staff-styled .cho-online-patients header label { display:flex; align-items:center; gap:8px; width:100%; min-height:38px; border:1px solid #d4e3ef; border-radius:6px; padding:0 10px; background:#fafcfe; }
+.cho-staff-styled .cho-online-patients header label input { min-width:0; width:100%; height:34px; min-height:0; padding:6px 0; border:0; background:transparent; }
+.cho-staff-styled .cho-online-patients header label:focus-within { outline:2px solid #bfdcf0; }
+.cho-staff-styled .cho-online-patients header label input:focus { outline:none; }
+.cho-staff-styled .cho-manage-toolbar { margin:0; flex-wrap:wrap; }
+.cho-staff-styled .cho-manage-toolbar > label { flex:1 1 260px; min-width:0; max-width:420px; width:auto; height:38px; border-radius:6px; background:#fafcfe; }
+.cho-staff-styled .cho-manage-toolbar > label input { min-width:0; min-height:0; height:34px; padding:6px 0; border:0; background:transparent; }
+.cho-staff-styled .cho-manage-toolbar > label:focus-within { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.cho-staff-styled .cho-manage-toolbar > label input:focus { outline:none; }
+.cho-staff-styled .cho-manage-toolbar > button { height:38px; min-height:38px; padding:0 13px; white-space:nowrap; }
+.cho-staff-styled .cho-manage-toolbar .manage-add-button { margin-left:auto; }
+.cho-staff-styled .cho-manage-filter-row { display:flex; flex-wrap:wrap; align-items:flex-end; }
+.cho-staff-styled .cho-manage-filter-row > label { display:grid; gap:7px; flex:1 1 180px; min-width:0; }
+.cho-staff-styled .cho-manage-filter-row select { width:100%; min-height:38px; }
+.cho-staff-styled .cho-manage-users-panel { min-width:0; overflow:hidden; }
+.cho-staff-styled .cho-manage-users-panel > h2 { display:flex; align-items:center; gap:9px; font-size:15px; font-weight:600; padding:18px; margin:0; }
+.cho-staff-styled .cho-manage-users-panel > h2 > span { padding:3px 8px; border-radius:12px; background:#eaf4fc; color:#176baf; font-size:11px; }
+.cho-staff-styled .cho-manage-users-table { min-width:950px; }
+.cho-staff-styled .department-table { min-width:780px; }
+.cho-staff-styled .department-toolbar { align-items:center; }
+.cho-staff-styled .department-toolbar input { width:min(380px,100%); min-width:0; }
+.cho-staff-styled .cho-user-modal { width:min(820px,100%); max-height:calc(100dvh - 36px); }
+.cho-staff-styled .cho-user-modal .cho-user-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px; padding:24px; }
+.cho-staff-styled .cho-user-form > label { display:flex; flex-direction:column; align-items:stretch; gap:8px; min-width:0; min-height:0; margin:0; padding:0; border:0; }
+.cho-staff-styled .cho-user-form > label > span { color:#405b71; font-size:12px; font-weight:600; }
+.cho-staff-styled .cho-user-form :is(input,select) { width:100%; min-width:0; min-height:40px; padding:9px 12px; border:1px solid #d4e3ef; border-radius:6px; font:inherit; font-size:13px; }
+.cho-staff-styled .cho-user-form > :is(.cho-user-type-switch,.patient-alert,p,.patient-form-actions) { grid-column:1 / -1; }
+.cho-staff-styled .cho-user-type-switch { display:flex; flex-wrap:wrap; }
+.cho-staff-styled .cho-user-type-switch button { flex:1 1 140px; min-height:36px; }
+.cho-staff-styled .cho-user-form .patient-form-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:12px; margin:0; padding-top:18px; border-top:1px solid #e5edf4; }
+@media(max-width:1100px) { .cho-staff-styled .cho-online-page { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:600px) { .cho-staff-styled .cho-user-modal .cho-user-form { grid-template-columns:minmax(0,1fr); padding:18px; } .cho-staff-styled .cho-manage-toolbar > label { max-width:none; flex-basis:100%; } .cho-staff-styled .cho-manage-toolbar .manage-add-button { margin-left:0; } }
+.cho-staff-styled .cho-manage-users-panel, .cho-staff-styled .cho-online-summary, .cho-staff-styled .cho-online-staff-card, .cho-staff-styled .cho-online-patients { border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; }
+.cho-staff-styled .cho-manage-toolbar { padding:18px; gap:10px; align-items:center; border-bottom:1px solid #e5edf4; }
+.cho-staff-styled .cho-manage-toolbar button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:36px; padding:8px 13px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.cho-staff-styled .cho-manage-toolbar .manage-add-button { background:#176baf; border-color:#176baf; color:#fff; }
+.cho-staff-styled .cho-manage-toolbar button:hover { filter:brightness(.96); }
+.cho-staff-styled .cho-manage-toolbar input { flex:1; min-width:120px; }
+.cho-staff-styled .cho-manage-filter-row { gap:12px; padding:16px 18px; background:#f5faff; }
+.cho-staff-styled .cho-manage-filter-row label { font-size:12px; color:#647e94; }
+.cho-staff-styled .cho-manage-users-table-wrap, .cho-staff-styled .department-table-wrap { overflow:auto; border:1px solid #e0e7ee; border-radius:5px; }
+.cho-staff-styled .cho-manage-users-table, .cho-staff-styled .department-table { width:100%; border-collapse:collapse; }
+.cho-staff-styled .cho-manage-users-table th, .cho-staff-styled .department-table th { padding:13px 12px; background:#f0f4f8; color:#405b71; font-size:11px; font-weight:600; text-align:left; white-space:nowrap; }
+.cho-staff-styled .cho-manage-users-table td, .cho-staff-styled .department-table td { padding:14px 12px; border-bottom:1px solid #e6ebf0; color:#40566b; font-size:12px; vertical-align:middle; line-height:1.5; }
+.cho-staff-styled .cho-manage-users-table tbody tr:hover, .cho-staff-styled .department-table tbody tr:hover { background:#f5faff; }
+.cho-staff-styled .manage-user-status { padding:4px 8px; border-radius:5px; font-size:10px; font-weight:500; }
+.cho-staff-styled .cho-manage-users-table button { padding:7px 12px; min-height:32px; border-radius:6px; font:inherit; font-size:12px; }
+.cho-staff-styled .department-toolbar { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-bottom:16px; }
+.cho-staff-styled .department-toolbar h2 { margin:0; }
+.cho-staff-styled .cho-online-summary h2, .cho-staff-styled .cho-online-patients h2 { font-size:16px; font-weight:600; color:#374c60; }
+.cho-staff-styled .cho-online-stat-list > div { padding:14px; border:1px solid #dce9f3; border-radius:6px; background:#f5faff; }
+.cho-staff-styled .cho-online-stat-list strong { color:#176baf; font-size:25px; font-weight:650; }
+.cho-staff-styled .cho-online-stat-list span { font-size:11px; color:#718396; }
+.cho-staff-styled .cho-online-staff-card { padding:18px; }
+.cho-staff-styled .cho-online-staff-card h3 { font-size:14px; color:#374c60; font-weight:600; }
+.cho-staff-styled .cho-online-staff-card p, .cho-staff-styled .cho-online-contact, .cho-staff-styled .cho-online-patient-list { font-size:12px; color:#718396; }
+.cho-staff-styled .cho-online-patient-list > div { border-bottom:1px solid #e6ebf0; padding:12px 0; }
+.cho-staff-styled .cho-user-modal { border:1px solid #dce9f3; border-radius:12px; box-shadow:0 24px 70px #17395c30; }
+.cho-staff-styled .cho-user-modal > header { background:#f5faff; padding:16px 20px; }
+.cho-staff-styled .cho-user-modal header h2 { font-size:18px; font-weight:600; }
+.cho-staff-styled .cho-user-modal .patient-form { padding:20px; }
+.cho-staff-styled .cho-user-type-switch { gap:8px; }
+.cho-staff-styled .cho-user-type-switch button { padding:9px 12px; border:1px solid #bfdcf0; border-radius:6px; background:#f5faff; color:#176baf; font:inherit; font-size:12px; }
+.cho-staff-styled .cho-user-type-switch button.active { background:#176baf; border-color:#176baf; color:#fff; }
+.cho-staff-styled .patient-form-actions button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:38px; padding:8px 16px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; }
+.cho-staff-styled .patient-form-actions button[type="submit"] { background:#176baf; border-color:#176baf; color:#fff; }
+.cho-staff-styled .patient-alert { padding:12px; border:1px solid #bfdcf0; border-radius:6px; background:#eff7fd; color:#235a84; font-size:12px; }
+@media(max-width:760px) { .cho-staff-styled .cho-manage-toolbar { flex-wrap:wrap; } .cho-staff-styled .cho-manage-toolbar input { flex-basis:100%; } .cho-staff-styled .department-toolbar input { width:100%; } }

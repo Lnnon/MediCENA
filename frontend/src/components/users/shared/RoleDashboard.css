@@ -1,0 +1,20 @@
+.role-header .role-brand-label { padding:4px 9px; border-left:1px solid var(--line); color:var(--muted); font-size:12px; font-weight:700; }
+.role-header .role-notification-menu { display:block; }
+.role-header .cho-nav-list .role-nav-active { background:#eef6fd; color:var(--blue); }
+.medical-workspace.role-dashboard .role-header .cho-navbar .cho-nav-list button.role-nav-active { background:transparent; color:#536079; }
+.medical-workspace.role-dashboard .role-header .cho-navbar .cho-nav-list button:hover,
+.medical-workspace.role-dashboard .role-header .cho-navbar .cho-nav-list button:focus-visible { background:#eaf4fc; color:#176baf; }
+.role-header .role-group-open > .cho-dropdown { opacity:1; pointer-events:auto; transform:translateY(0); }
+.role-stats-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.role-content-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.role-content-grid .cho-panel { display:flex; flex-direction:column; overflow:hidden; }
+.role-content-grid .cho-table { flex:1; }
+.role-panel-action { display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%; padding:14px 18px; border:0; border-top:1px solid var(--line); background:#f8fbfd; color:var(--blue); cursor:pointer; font-size:13px; font-weight:700; text-align:left; }
+.role-panel-action:hover { background:#eef6fd; }
+.role-empty-state { padding:28px 18px; color:var(--muted); font-size:13px; }
+.role-workflow-list { margin:0; padding:20px 20px 20px 42px; display:grid; gap:18px; flex:1; color:var(--ink); font-size:13px; }
+.role-workflow-list li::marker { color:var(--blue); font-weight:700; }
+.role-header button:focus-visible,.role-panel-action:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+@media(max-width:900px) { .role-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:768px) { .role-content-grid { grid-template-columns:1fr; } .role-header .role-brand-label { display:none; } .role-header .cho-topnav { gap:8px; } }
+@media(max-width:480px) { .role-content-grid .cho-table-row { grid-template-columns:1fr auto; } .role-content-grid .cho-table-row time { grid-column:1 / -1; } }

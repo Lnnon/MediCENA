@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MediFLOW">
+  <rect width="512" height="512" rx="96" fill="#eef6fd"/>
+  <path d="M116 314V176h44l38 82 38-82h44v138h-34v-88l-35 73h-27l-35-73v88h-33Z" fill="#17395c"/>
+  <path d="M300 314V176h98v31h-62v28h55v31h-55v48h-36Z" fill="#0f9fbd"/>
+  <path d="M104 356h304" stroke="#2f80ed" stroke-width="24" stroke-linecap="round"/>
+  <path d="M116 356h88l28-56 48 104 33-48h83" fill="none" stroke="#22c55e" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

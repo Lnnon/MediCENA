@@ -1,0 +1,48 @@
+/* Replace legacy green referral bodies with medical-blue clinical cards. */
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-page { grid-template-columns:250px minmax(0,1fr); gap:20px; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar { min-width:0; padding:18px; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > h2 { padding:0 0 14px; margin:0 0 16px; border-bottom:1px solid #e5edf4; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > label { display:grid; grid-template-columns:minmax(0,1fr); gap:7px; padding:0; margin:0 0 16px; min-width:0; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > label > span { margin:0; font-size:11px; font-weight:500; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > label > div { display:flex; align-items:center; gap:8px; min-width:0; height:38px; padding:0 10px; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > label > div svg { flex-shrink:0; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar input,
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar select { box-sizing:border-box; min-width:0; width:100%; height:38px; min-height:38px; padding:8px 10px; font:inherit; font-size:12px; border:1px solid #d4e3ef; border-radius:6px; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > label > div input { height:34px; min-height:0; padding:6px 0; border:0; background:transparent; box-shadow:none; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-sidebar > .filter-button { width:100%; margin:0; min-height:38px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-menu { margin:20px 0 0; padding:14px 0 0; border:0; border-top:1px solid #e5edf4; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-menu h2 { margin:0 0 10px; padding:0; border:0; background:transparent; color:#647e94; font-size:12px; }
+.opd-shell .cho-main .opd-incoming-modern .cho-incoming-menu a { padding:10px; }
+@media(max-width:900px) { .opd-shell .cho-main .opd-incoming-modern .cho-incoming-page { grid-template-columns:minmax(0,1fr); } }
+.opd-incoming-modern .cho-incoming-page { margin-top:0; padding-top:0; align-items:start; }
+.opd-incoming-modern .cho-incoming-sidebar { padding:18px; border:1px solid #dce6ef; border-radius:8px; box-shadow:none; background:#fff; }
+.opd-incoming-modern .cho-incoming-sidebar h2 { margin:0 0 16px; color:#374c60; font-size:15px; font-weight:600; }
+.opd-incoming-modern .cho-incoming-sidebar label { margin-bottom:14px; }
+.opd-incoming-modern .cho-incoming-sidebar label > span { color:#718396; font-size:11px; }
+.opd-incoming-modern .cho-incoming-sidebar input, .opd-incoming-modern .cho-incoming-sidebar select { border-color:#d4e3ef; border-radius:6px; font-size:12px; }
+.opd-incoming-modern .cho-incoming-sidebar label > div { background:#fafcfe; border:1px solid #d4e3ef; border-radius:6px; }
+.opd-incoming-modern .cho-incoming-sidebar label > div:focus-within { outline:2px solid #bfdcf0; }
+.opd-incoming-modern .cho-incoming-sidebar label > div input:focus { outline:none; }
+.opd-incoming-modern .cho-incoming-menu { border-top:1px solid #e5edf4; margin-top:20px; padding-top:18px; }
+.opd-incoming-modern .cho-incoming-menu a { border-radius:6px; color:#647e94; font-size:12px; }
+.opd-incoming-modern .cho-incoming-menu a.active { background:#eaf4fc; color:#176baf; }
+.opd-incoming-modern .cho-incoming-title { font-size:16px; font-weight:600; color:#374c60; margin:20px 0 14px; }
+.opd-incoming-modern .cho-incoming-list { display:grid; gap:14px; }
+.opd-incoming-modern .cho-incoming-card { display:grid; grid-template-columns:42px minmax(0,1fr); gap:14px; padding:18px; border:1px solid #dce6ef; border-radius:8px; background:white; box-shadow:none; }
+.opd-incoming-modern .cho-incoming-card .incoming-card-icon { display:grid; place-items:center; width:40px; height:40px; border-radius:50%; background:#dceefb; color:#176baf; font-size:12px; font-weight:600; }
+.opd-incoming-modern .cho-incoming-card .incoming-card-body { min-width:0; padding:0; border:0; border-radius:0; background:transparent; }
+.opd-incoming-modern .incoming-card-body header { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding-bottom:12px; border-bottom:1px solid #edf2f6; }
+.opd-incoming-modern .incoming-card-body h3 { color:#374c60; font-size:15px; font-weight:600; margin:0 0 5px; }
+.opd-incoming-modern .incoming-card-body p { color:#718396; font-size:12px; line-height:1.6; margin:0; }
+.opd-incoming-modern .incoming-card-body time { color:#8190a0; font-size:11px; }
+.opd-incoming-metadata { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:16px 0; }
+.opd-incoming-metadata dt { color:#8190a0; font-size:10px; margin-bottom:6px; }
+.opd-incoming-metadata dd { margin:0; color:#40566b; font-size:12px; overflow-wrap:anywhere; }
+.opd-incoming-status { display:inline-block; padding:3px 8px; background:#eaf4fc; color:#176baf; border-radius:4px; font-size:10px; }
+.opd-incoming-modern .incoming-card-actions { display:flex; flex-wrap:wrap; gap:8px; padding-top:5px; }
+.opd-incoming-modern .incoming-card-actions button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:34px; padding:8px 12px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font-family:inherit; font-size:12px; cursor:pointer; }
+.opd-incoming-modern .incoming-card-actions .primary-action-button { background:#176baf; border-color:#176baf; color:#fff; }
+.opd-incoming-modern .assigned-doctor-note { margin-top:12px; padding:10px; background:#f5faff; border-radius:5px; }
+.opd-incoming-modern .cho-warning-note { background:#fffbef; border:1px solid #eee1b9; border-radius:6px; color:#8a6a20; font-size:12px; }
+.opd-incoming-modern .cho-info-note { background:#eff7fd; border:1px solid #cfe2f2; border-radius:6px; color:#235a84; font-size:12px; }
+@media(max-width:650px) { .opd-incoming-metadata { grid-template-columns:1fr; gap:10px; } .opd-incoming-modern .cho-incoming-card { grid-template-columns:minmax(0,1fr); padding:16px; } }

@@ -1,0 +1,63 @@
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-inventory-page { display:grid; grid-template-columns:250px minmax(0,1fr); gap:20px; align-items:start; margin:0; padding:0; }
+.pharma-inventory-ui .cho-filter-panel { min-width:0; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel { padding:18px; border:1px solid #dce6ef; border-radius:8px; }
+.pharma-inventory-ui .cho-filter-panel > h2 { margin:0 0 16px; padding-bottom:14px; border-bottom:1px solid #e5edf4; color:#374c60; font-size:15px; font-weight:600; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel > label { display:grid; grid-template-columns:minmax(0,1fr); gap:7px; margin:0 0 16px; padding:0; }
+.pharma-inventory-ui .cho-filter-panel > label > span { margin:0; font-size:11px; color:#718396; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel label > div { display:flex; align-items:center; gap:8px; height:38px; padding:0 10px; border:1px solid #d4e3ef; border-radius:6px; background:#fafcfe; }
+.pharma-inventory-ui .cho-filter-panel label > div svg { flex-shrink:0; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel :is(input,select) { min-width:0; width:100%; min-height:38px; height:38px; padding:8px 10px; border:1px solid #d4e3ef; border-radius:6px; font:inherit; font-size:12px; box-sizing:border-box; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel label > div input { border:0; min-height:0; height:34px; padding:6px 0; background:transparent; }
+.pharma-inventory-ui .cho-filter-panel label > div:focus-within { outline:2px solid #bfdcf0; }
+.pharma-inventory-ui .cho-filter-panel label > div input:focus { outline:none; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel > button { width:100%; margin:0 0 10px; min-height:38px; padding:8px 12px; border-radius:6px; font-size:12px; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-filter-panel .add-patient-button { background:#176baf; color:#fff; border:1px solid #176baf; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-inventory-panel { min-width:0; padding:20px; border:1px solid #dce6ef; border-radius:8px; overflow:hidden; }
+.pharma-inventory-ui .cho-inventory-panel > h2 { margin:0 0 16px; padding-bottom:14px; border-bottom:1px solid #e5edf4; font-size:15px; font-weight:600; color:#374c60; }
+.pharma-inventory-ui .cho-medicine-request-table-wrap { width:100%; max-width:100%; overflow:auto; }
+.pharma-inventory-ui .cho-inventory-table { width:100%; min-width:950px; }
+.pharma-inventory-ui .cho-inventory-table th { white-space:nowrap; }
+.pharma-inventory-ui .cho-inventory-table :is(th,td):nth-child(7) { text-align:right; font-variant-numeric:tabular-nums; }
+.pharma-inventory-ui .cho-inventory-table :is(th,td):last-child { width:180px; text-align:left; white-space:nowrap; }
+.pharma-inventory-ui .cho-request-actions { display:flex; align-items:center; flex-wrap:nowrap; gap:7px; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-request-actions > button { display:inline-flex; align-items:center; justify-content:center; gap:7px; height:34px; min-height:34px; padding:0 12px; box-sizing:border-box; line-height:1; white-space:nowrap; border-width:1px; border-style:solid; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-request-actions > button > svg { width:13px; height:13px; flex-shrink:0; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .cho-request-actions .request-view-button { background:#fff5df; color:#93610c; border:1px solid #eddaa8; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .patient-modal { width:min(760px,100%); max-height:calc(100dvh - 36px); }
+.pharmacist-shell .cho-main .pharma-inventory-ui .patient-modal > header { padding:20px 24px; border-bottom:2px solid #176baf; background:#f5faff; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .medicine-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px; padding:24px; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .medicine-form > label { display:flex; flex-direction:column; align-items:stretch; gap:8px; padding:0; margin:0; border:0; min-width:0; }
+.pharma-inventory-ui .medicine-form label > span { color:#647e94; font-size:11px; }
+.pharmacist-shell .cho-main .pharma-inventory-ui .medicine-form :is(input,select) { width:100%; min-width:0; min-height:40px; padding:9px 10px; border:1px solid #cddfeb; border-radius:6px; font:inherit; font-size:13px; }
+.pharma-inventory-ui .medicine-form .medicine-form-actions { grid-column:1 / -1; display:flex; justify-content:flex-end; gap:12px; padding-top:18px; border-top:1px solid #dce9f3; }
+/* Clip horizontal overflow without creating a scroll container around the sticky card. */
+:is(html, body, #root):has(.pharmacist-shell .pharma-inventory-ui) {
+  overflow-x: clip;
+}
+
+.pharmacist-shell .pharma-inventory-ui .cho-inventory-page > .cho-filter-panel {
+  --inventory-filter-top: 92px;
+  position: sticky;
+  top: var(--inventory-filter-top);
+  z-index: 2;
+  max-height: calc(100dvh - var(--inventory-filter-top) - 24px);
+  overflow-y: auto;
+}
+
+@media (max-width: 1100px) {
+  .pharmacist-shell .cho-main .pharma-inventory-ui .cho-inventory-page {
+    display: block;
+  }
+
+  .pharmacist-shell .pharma-inventory-ui .cho-inventory-page > .cho-filter-panel {
+    margin-bottom: 20px;
+    max-height: min(42dvh, calc(100dvh - var(--inventory-filter-top) - 24px));
+  }
+}
+
+@media (max-width: 768px) {
+  .pharmacist-shell .pharma-inventory-ui .cho-inventory-page > .cho-filter-panel {
+    --inventory-filter-top: 128px;
+  }
+}
+@media(max-width:600px) { .pharmacist-shell .cho-main .pharma-inventory-ui .medicine-form { grid-template-columns:minmax(0,1fr); padding:18px; } }

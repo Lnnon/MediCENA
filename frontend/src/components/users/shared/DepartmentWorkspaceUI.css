@@ -1,0 +1,41 @@
+/* OPD / Pharmacist theme only. Page components own all layout and sizing. */
+.medical-workspace.role-dashboard { --blue:#176baf; --ink:#374c60; --navy:#234e70; --line:#dce9f3; }
+.role-dashboard .cho-main .cho-page-heading h1 { font-size:23px; font-weight:650; color:#303f50; }
+.role-dashboard .cho-main .cho-page-heading p { font-size:12px; color:#718396; }
+.role-dashboard .cho-main :is(.cho-panel,.cho-filter-panel,.cho-patient-list-panel,.profile-card,.cho-settings-panel,.department-panel) { border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; }
+.role-dashboard .cho-main :is(.cho-panel-heading,.cho-settings-heading) { color:#176baf; border-bottom:1px solid #e5edf4; }
+.role-dashboard .cho-main :is(.cho-panel-heading,.cho-settings-heading) h2 { color:#374c60; font-size:15px; font-weight:600; }
+.role-dashboard .cho-main .cho-filter-panel h2 { font-size:15px; font-weight:600; }
+.role-dashboard .cho-main .cho-filter-panel label > span { font-size:11px; color:#718396; }
+.role-dashboard .cho-main .cho-filter-panel label > div { border:1px solid #d4e3ef; border-radius:6px; background:#fafcfe; color:#718396; }
+.role-dashboard .cho-main .cho-filter-panel label > div:focus-within { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.role-dashboard .cho-main .cho-filter-panel label > div input:focus { outline:none; box-shadow:none; }
+.role-dashboard .cho-main :is(.cho-filter-panel select,.department-toolbar input) { border:1px solid #d4e3ef; border-radius:6px; font-size:12px; }
+.role-dashboard .cho-main :is(.cho-medicine-request-table-wrap,.department-table-wrap) { border:1px solid #e0e7ee; border-radius:5px; }
+.role-dashboard .cho-main table th { background:#f0f4f8; color:#405b71; font-size:11px; font-weight:600; }
+.role-dashboard .cho-main table td { border-bottom:1px solid #e6ebf0; font-size:12px; color:#40566b; }
+.role-dashboard .cho-main table td strong { font-size:12px; font-weight:600; }
+.role-dashboard .cho-main table td > span:not([class*="status"]) { color:#7b8896; font-size:11px; }
+.role-dashboard .cho-main .cho-request-status { border-radius:5px; font-size:10px; font-weight:500; }
+.role-dashboard .cho-main :is(.cho-request-actions button,.medicine-row-actions button,.filter-button,.reports-actions button,.medicine-form-actions button,.patient-form-actions button) { border-radius:6px; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.role-dashboard .cho-main :is(.request-view-button,.filter-button,.reports-actions button) { background:#eaf4fc; color:#176baf; border:1px solid #bfdcf0; }
+.role-dashboard .cho-main :is(.department-edit-button,.medicine-edit-button) { background:#fff5df; color:#93610c; border:1px solid #eddaa8; }
+.role-dashboard .cho-main .request-approve-button { background:#eaf7ef; color:#237548; border:1px solid #b8dfc7; }
+.role-dashboard .cho-main .request-reject-button { background:#fff1f2; color:#b44452; border:1px solid #efc9ce; }
+.role-dashboard .cho-main .request-dispatch-button { background:#176baf; color:#fff; border:1px solid #176baf; }
+.role-dashboard .cho-main .patient-modal { border:1px solid #dce9f3; border-radius:10px; box-shadow:0 24px 70px #17395c30; }
+.role-dashboard .cho-main .patient-modal > header { background:#f5faff; border-bottom:1px solid #dce9f3; }
+.role-dashboard .cho-main .patient-modal header h2 { color:#234e70; font-size:18px; font-weight:600; }
+.role-dashboard .cho-main :is(.patient-form,.medicine-form,.medicine-request-form,.department-form) :is(input:not([type="radio"]):not([type="checkbox"]),select,textarea) { border:1px solid #d4e3ef; border-radius:6px; background:#fff; color:#34495e; font-family:inherit; font-size:13px; }
+.role-dashboard .cho-main :is(.patient-form,.medicine-form,.medicine-request-form,.department-form) label > span { font-size:12px; color:#405b71; }
+.role-dashboard .cho-main :is(.patient-form-actions,.medicine-form-actions) button { background:#f3f6f9; color:#607589; border:1px solid #d4dfe8; }
+.role-dashboard .cho-main :is(.patient-form-actions,.medicine-form-actions) button[type="submit"] { background:#176baf; color:white; border-color:#176baf; }
+.role-dashboard .cho-main .patient-account-details > div { border-color:#e0eaf3; }
+.role-dashboard .cho-main .patient-alert { border:1px solid #bfdcf0; border-radius:6px; background:#eff7fd; color:#235a84; font-size:12px; }
+.role-dashboard .cho-main .cho-stat-card { border:1px solid #dce6ef; border-radius:7px; box-shadow:none; }
+.role-dashboard .cho-main .cho-stat-icon { background:#eaf4fc; color:#176baf; border-radius:8px; }
+.role-dashboard .cho-main .role-panel-action { background:#f5faff; color:#176baf; font-size:12px; font-weight:600; }
+.role-dashboard .cho-main .role-workflow-list { font-size:12px; color:#647e94; }
+.role-dashboard .cho-main .profile-detail-grid > div { background:#f7fbff; border:1px solid #e0eaf3; border-radius:6px; }
+.role-dashboard .cho-main .profile-detail-grid strong { font-size:13px; font-weight:500; }
+.role-dashboard .cho-main button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }

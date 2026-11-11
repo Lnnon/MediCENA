@@ -1,0 +1,31 @@
+/* Track Patients keeps its original EHR layout with the patient-list visual theme. */
+.cho-track-styled { color:#374151; font-size:13px; }
+.cho-track-styled .cho-page-heading h1 { font-size:23px; font-weight:650; color:#303f50; margin:5px 0; }
+.cho-track-styled .cho-page-heading p { font-size:12px; line-height:1.6; color:#718396; }
+.cho-track-styled .cho-page-heading span { color:#176baf; font-size:10px; letter-spacing:.06em; }
+.cho-track-styled .cho-filter-panel, .cho-track-styled .cho-track-card { background:#fff; border:1px solid #dce6ef; border-radius:7px; box-shadow:none; }
+.cho-track-styled .cho-filter-panel { padding:18px; }
+.cho-track-styled .cho-filter-panel h2 { font-size:15px; font-weight:600; color:#374c60; }
+.cho-track-styled .cho-filter-panel label > span { font-size:12px; color:#718396; }
+.cho-track-styled .cho-filter-panel label > div { border:1px solid #d4e3ef; border-radius:6px; padding:9px; color:#718396; background:#fafcfe; }
+.cho-track-styled .cho-filter-panel input { font:inherit; font-size:12px; background:transparent; }
+.cho-track-styled .cho-track-summary-card { border:1px solid #dce9f3; border-radius:6px; background:#f5faff; color:#176baf; }
+.cho-track-styled .cho-track-summary-card span { font-size:11px; color:#718396; }
+.cho-track-styled .cho-track-card > header { padding:18px; background:#f5faff; border-bottom:1px solid #e0eaf3; border-radius:7px 7px 0 0; }
+.cho-track-styled .cho-track-card header h2 { font-size:17px; font-weight:600; color:#374c60; }
+.cho-track-styled .cho-track-card header span, .cho-track-styled .cho-track-card header p { font-size:11px; color:#718396; line-height:1.6; }
+.cho-track-styled .cho-track-card-actions strong { font-size:11px; font-weight:500; color:#176baf; background:#eaf4fc; border-radius:5px; }
+.cho-track-styled .cho-track-clinical-item { background:#fff; border:1px solid #e0eaf3; border-radius:5px; padding:14px; }
+.cho-track-styled .cho-track-clinical-item svg, .cho-track-styled .cho-track-detail-grid svg { color:#176baf; }
+.cho-track-styled .cho-track-clinical-item span { font-size:10px; color:#718396; }
+.cho-track-styled .cho-track-clinical-item strong { color:#40566b; font-size:12px; font-weight:500; line-height:1.6; white-space:pre-wrap; overflow-wrap:anywhere; }
+.cho-track-styled .cho-ehr-history-heading strong { font-size:13px; color:#40566b; font-weight:600; }
+.cho-track-styled .cho-ehr-history-heading time { font-size:11px; color:#718396; }
+.cho-track-styled .cho-ehr-record-row { border:1px solid #dce9f3; border-radius:6px; background:#fff; }
+.cho-track-styled .cho-ehr-record-summary strong { font-size:12px; font-weight:600; }
+.cho-track-styled .cho-ehr-record-summary p { font-size:11px; line-height:1.6; color:#718396; }
+.cho-track-styled .cho-track-expand-button { display:inline-flex; align-items:center; gap:7px; padding:7px 12px; min-height:34px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; font-weight:600; }
+.cho-track-styled .cho-track-expand-button:hover { background:#dceefb; }
+.cho-track-styled button:focus-visible, .cho-track-styled input:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+.cho-track-styled .cho-track-detail-grid > div { background:#f7fbff; border:1px solid #e0eaf3; border-radius:5px; }
+.cho-track-styled .cho-track-detail-grid strong { font-size:12px; font-weight:500; line-height:1.6; overflow-wrap:anywhere; }

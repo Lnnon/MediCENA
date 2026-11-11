@@ -1,0 +1,55 @@
+:root {
+  --btn-primary: #2f80ed;
+  --btn-primary-hover: #1f6ed4;
+  --btn-secondary: #65758b;
+  --btn-secondary-hover: #526176;
+  --btn-success: #22b14c;
+  --btn-success-hover: #1d9841;
+  --btn-danger: #e94848;
+  --btn-danger-hover: #d43b3b;
+  --btn-warning: #f5a11a;
+  --btn-warning-hover: #df8e0d;
+  --btn-help: #9b51e0;
+  --btn-help-hover: #8643c8;
+  --btn-disabled: #a9c7ee;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #183a5b;
+  background: #f6f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section,
+footer {
+  scroll-margin-top: 92px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease, filter 0.18s ease;
+}
+
+button svg {
+  flex: 0 0 auto;
+}

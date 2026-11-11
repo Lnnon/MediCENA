@@ -1,0 +1,14 @@
+.bhc-shell .bhc-filter-toolbar { min-width:0; grid-column:1 / -1; margin:0 0 12px; }
+.bhc-toolbar-row,.bhc-toolbar-options { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.bhc-shell .bhc-toolbar-search { display:flex; align-items:center; gap:8px; padding:0 12px; flex:0 1 540px; min-width:0; min-height:42px; margin:0; background:white; border:1px solid #cbddec; border-radius:6px; color:#59738a; }
+.bhc-shell .bhc-toolbar-search input { flex:1; min-width:0; min-height:40px; padding:0; border:0; background:transparent; font:inherit; font-size:14px; }
+.bhc-toolbar-search:focus-within { outline:2px solid #176baf; }
+.bhc-shell .bhc-toolbar-toggle,.bhc-shell .bhc-toolbar-options button { display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:8px 14px; min-height:42px; border:1px solid #bad6eb; border-radius:6px; background:#edf6fd; color:#176baf; font:600 14px/1.4 Arial,sans-serif; cursor:pointer; }
+.bhc-toolbar-options { padding:14px 0 0; align-items:end; }
+.bhc-toolbar-options[hidden] { display:none; }
+.bhc-toolbar-options > label { display:grid; gap:6px; min-width:140px; color:#405b71; font-size:13px; }
+.bhc-toolbar-options label :is(select,input) { box-sizing:border-box; min-height:40px; padding:7px 10px; border:1px solid #cbddec; border-radius:6px; background:white; font:inherit; }
+.bhc-toolbar-options label > div { display:flex; align-items:center; gap:6px; }
+.bhc-shell .bhc-main :is(.bhc-patient-page,.bhc-referral-page,.cho-health-map-page):has(> .bhc-filter-toolbar) { grid-template-columns:minmax(0,1fr); }
+.bhc-toolbar-row .add-patient-button { margin-inline-start:auto; padding:10px 14px; border:0; border-radius:6px; background:#176baf; color:white; cursor:pointer; }
+@media(max-width:600px) { .bhc-toolbar-search { flex:1 1 180px; } .bhc-toolbar-options > label { flex:1 1 150px; } }

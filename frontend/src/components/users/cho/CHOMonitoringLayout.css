@@ -1,0 +1,23 @@
+/* Monitoring pages keep their maps, charts, filters, and report layouts. */
+.cho-monitoring-styled { color:#374151; font-size:13px; }
+.cho-monitoring-styled .cho-page-heading h1 { margin:5px 0; color:#303f50; font-size:23px; font-weight:650; }
+.cho-monitoring-styled .cho-page-heading span { color:#176baf; font-size:10px; letter-spacing:.06em; }
+.cho-monitoring-styled .cho-page-heading p { font-size:12px; color:#718396; line-height:1.6; }
+.cho-monitoring-styled .cho-panel, .cho-monitoring-styled .cho-filter-panel, .cho-monitoring-styled .cho-health-map-card,
+.cho-monitoring-styled .analytics-metric-card, .cho-monitoring-styled .analytics-wide-card, .cho-monitoring-styled .analytics-detail-card,
+.cho-monitoring-styled .reports-card { border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; }
+.cho-monitoring-styled h2 { color:#374c60; font-size:16px; font-weight:600; }
+.cho-monitoring-styled h3 { font-size:13px; font-weight:600; }
+.cho-monitoring-styled .cho-panel-heading { color:#176baf; padding-bottom:14px; border-bottom:1px solid #e5edf4; }
+.cho-monitoring-styled .cho-panel-heading span { font-size:10px; color:#8190a0; }
+.cho-monitoring-styled input:not([type="checkbox"]):not([type="radio"]), .cho-monitoring-styled select { min-height:36px; padding:8px 10px; border:1px solid #d4e3ef; border-radius:6px; font:inherit; font-size:12px; background:#fff; color:#40566b; max-width:100%; }
+.cho-monitoring-styled input:focus, .cho-monitoring-styled select:focus { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.cho-monitoring-styled .analytics-back-button, .cho-monitoring-styled .panel-filter-form button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:36px; padding:8px 14px; background:#176baf; color:#fff; border:1px solid #176baf; border-radius:6px; font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.cho-monitoring-styled .request-view-button, .cho-monitoring-styled .filter-button { display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:8px 12px; min-height:34px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.cho-monitoring-styled button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+.cho-monitoring-styled .cho-medicine-request-table-wrap { border:1px solid #e0e7ee; border-radius:5px; overflow:auto; }
+.cho-monitoring-styled .cho-medicine-request-table th { background:#f0f4f8; color:#405b71; font-size:11px; padding:13px 12px; }
+.cho-monitoring-styled .cho-medicine-request-table td { font-size:12px; padding:14px 12px; border-bottom:1px solid #e6ebf0; }
+.cho-monitoring-styled .panel-notice { padding:12px; background:#f5faff; border:1px solid #dce9f3; border-radius:6px; color:#647e94; font-size:12px; line-height:1.6; }
+.cho-monitoring-styled .panel-summary { border-radius:6px; background:#f5faff; color:#40566b; font-size:12px; }
+.cho-monitoring-styled .panel-filter-form label { font-size:12px; color:#647e94; }

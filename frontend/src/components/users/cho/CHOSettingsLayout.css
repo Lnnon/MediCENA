@@ -1,0 +1,28 @@
+.cho-settings-styled { color:#374151; font-size:13px; }
+.cho-settings-styled .cho-page-heading h1 { margin:5px 0; color:#303f50; font-size:23px; font-weight:650; }
+.cho-settings-styled .cho-page-heading span { color:#176baf; font-size:10px; letter-spacing:.06em; }
+.cho-settings-styled .cho-page-heading p { color:#718396; font-size:12px; line-height:1.6; }
+.cho-settings-styled .cho-settings-grid { gap:18px; }
+.cho-settings-styled .cho-settings-panel { min-width:0; padding:22px; border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; }
+.cho-settings-styled .cho-settings-heading { align-items:center; gap:12px; margin-bottom:20px; padding-bottom:18px; border-bottom:1px solid #e5edf4; }
+.cho-settings-styled .cho-settings-icon { display:grid; place-items:center; flex-shrink:0; width:40px; height:40px; background:#eaf4fc; color:#176baf; border-radius:8px; }
+.cho-settings-styled .cho-settings-heading h2 { color:#374c60; font-size:16px; font-weight:600; margin:0 0 5px; }
+.cho-settings-styled .cho-settings-heading p { margin:0; color:#718396; font-size:12px; line-height:1.6; }
+.cho-settings-styled .cho-settings-form { display:grid; gap:18px; }
+.cho-settings-styled .cho-settings-form label { display:grid; gap:8px; }
+.cho-settings-styled .cho-settings-form label > span { color:#405b71; font-size:12px; font-weight:600; }
+.cho-settings-styled .cho-settings-form input { width:100%; min-height:42px; padding:10px 12px; border:1px solid #d4e3ef; border-radius:6px; background:#fff; color:#34495e; font:inherit; font-size:13px; }
+.cho-settings-styled .cho-settings-form input::placeholder { color:#95a2af; }
+.cho-settings-styled .cho-settings-form input:focus { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.cho-settings-styled .cho-settings-form button, .cho-settings-styled .cho-status-toggle button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:38px; padding:9px 16px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.cho-settings-styled .cho-settings-form button { justify-self:start; margin-top:2px; background:#176baf; border-color:#176baf; color:#fff; }
+.cho-settings-styled .cho-settings-form button:hover { background:#12578f; }
+.cho-settings-styled .cho-status-card { padding:18px; border:1px solid #dce9f3; border-radius:6px; background:#f5faff; margin-bottom:18px; }
+.cho-settings-styled .cho-status-card > span { font-size:11px; color:#718396; }
+.cho-settings-styled .cho-status-card > strong { font-size:23px; font-weight:600; }
+.cho-settings-styled .cho-status-toggle { display:flex; gap:10px; flex-wrap:wrap; }
+.cho-settings-styled .cho-status-toggle button.active:not(.danger) { background:#176baf; border-color:#176baf; color:#fff; }
+.cho-settings-styled .cho-status-toggle button.danger { border-color:#efc9ce; background:#fff4f5; color:#b44452; }
+.cho-settings-styled .cho-status-toggle button.active.danger { border-color:#b44452; background:#b44452; color:#fff; }
+.cho-settings-styled button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+@media(max-width:760px) { .cho-settings-styled .cho-settings-panel { padding:18px; } .cho-settings-styled .cho-settings-form button { width:100%; } }

@@ -1,0 +1,35 @@
+/* OPD visual theme matches BHC. No page layout, data, or workflow overrides. */
+.medical-workspace.opd-shell { --blue:#176baf; --ink:#374c60; --navy:#234e70; --line:#dce9f3; }
+.opd-shell .cho-main { background-color:#f3f8fc; color:#374c60; }
+.opd-shell .cho-main .cho-page-heading h1 { font-family:inherit; font-size:23px; font-weight:650; color:#303f50; }
+.opd-shell .cho-main .cho-page-heading p { color:#718396; font-size:12px; }
+.opd-shell .cho-main :is(.cho-panel,.cho-filter-panel,.cho-patient-list-panel,.profile-card,.cho-settings-panel) { background-color:#fff; border-color:#dce6ef; border-radius:7px; box-shadow:none; }
+.opd-shell .cho-main :is(.cho-filter-panel h2,.cho-patient-list-panel h2,.cho-panel-heading h2) { font-size:15px; font-weight:600; color:#374c60; }
+.opd-shell .cho-main .cho-filter-panel label > span { font-size:11px; color:#718396; }
+.opd-shell .cho-main .cho-filter-panel label > div { background-color:#fafcfe; border-color:#d4e3ef; border-radius:6px; color:#718396; }
+.opd-shell .cho-main .cho-filter-panel label > div:focus-within { border-color:#4296d2; outline:2px solid #bfdcf0; }
+.opd-shell .cho-main .cho-filter-panel label > div input:focus { outline:none; box-shadow:none; }
+.opd-shell .cho-main .cho-filter-panel select { background-color:#fff; color:#40566b; border-color:#d4e3ef; border-radius:6px; font-size:12px; }
+.opd-shell .cho-main .cho-medicine-request-table-wrap { border-color:#e0e7ee; border-radius:5px; }
+.opd-shell .cho-main table th { background-color:#f0f4f8; color:#405b71; font-size:11px; font-weight:600; }
+.opd-shell .cho-main table td { color:#40566b; border-bottom-color:#e6ebf0; font-size:12px; }
+.opd-shell .cho-main table td strong { color:#374c60; font-weight:600; }
+.opd-shell .cho-main table tbody tr:hover { background-color:#f5faff; }
+.opd-shell .cho-main .cho-request-status { border-radius:5px; font-size:10px; font-weight:500; }
+.opd-shell .cho-main :is(.request-view-button,.filter-button,.reports-actions button) { color:#176baf; background-color:#eaf4fc; border-color:#bfdcf0; border-radius:6px; font-family:inherit; font-size:12px; font-weight:600; }
+.opd-shell .cho-main .department-edit-button { color:#93610c; background-color:#fff5df; border-color:#eddaa8; }
+.opd-shell .cho-main .request-approve-button { color:#237548; background-color:#eaf7ef; border-color:#b8dfc7; }
+.opd-shell .cho-main .request-reject-button { color:#b44452; background-color:#fff1f2; border-color:#efc9ce; }
+.opd-shell .cho-main .patient-modal { background-color:#fff; border-color:#dce9f3; border-radius:10px; box-shadow:0 24px 70px #17395c30; }
+.opd-shell .cho-main .patient-modal > header { background-color:#f5faff; border-bottom-color:#dce9f3; }
+.opd-shell .cho-main .patient-modal header h2 { color:#234e70; font-size:18px; font-weight:600; }
+.opd-shell .cho-main .patient-modal header p { color:#718396; font-size:12px; }
+.opd-shell .cho-main .patient-modal :is(input:not([type="checkbox"]):not([type="radio"]),select,textarea) { font-family:inherit; font-size:13px; border-color:#d4e3ef; border-radius:6px; color:#34495e; background-color:#fff; }
+.opd-shell .cho-main .patient-modal input[readonly] { background-color:#f3f7fa; color:#718396; }
+.opd-shell .cho-main .patient-modal label > span { color:#405b71; font-size:12px; font-weight:600; }
+.opd-shell .cho-main .patient-form-actions button { border-radius:6px; background-color:#f3f6f9; color:#607589; border-color:#d4dfe8; font-size:12px; }
+.opd-shell .cho-main .patient-form-actions button[type="submit"] { background-color:#176baf; border-color:#176baf; color:#fff; }
+.opd-shell .cho-main .patient-alert { background-color:#eff7fd; color:#235a84; border-color:#bfdcf0; border-radius:6px; font-size:12px; }
+.opd-shell .cho-main .cho-stat-card { background-color:#fff; border-color:#dce6ef; border-radius:7px; box-shadow:none; }
+.opd-shell .cho-main .cho-stat-icon { background-color:#eaf4fc; color:#176baf; border-radius:8px; }
+.opd-shell .cho-main button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }

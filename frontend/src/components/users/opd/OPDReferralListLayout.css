@@ -1,0 +1,62 @@
+.opd-list-tabs { display:flex; gap:22px; overflow-x:auto; margin-bottom:16px; border-bottom:1px solid #dce6ef; }
+.opd-list-tabs button { display:inline-flex; align-items:center; gap:8px; padding:12px 0; border:0; border-bottom:2px solid transparent; background:transparent; color:#718396; font:inherit; font-size:12px; white-space:nowrap; cursor:pointer; }
+.opd-list-tabs button[aria-pressed="true"] { color:#176baf; border-bottom-color:#176baf; }
+.opd-list-tabs button > span { background:#e4eef7; border-radius:12px; padding:2px 7px; font-size:10px; }
+.opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout .cho-medicine-request-page { grid-template-columns:minmax(0,1fr); gap:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout.has-details .cho-medicine-request-page { grid-template-columns:minmax(0,1fr) minmax(320px,36%); }
+.opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout .cho-filter-panel { display:flex; flex-wrap:wrap; align-items:flex-end; gap:12px; grid-column:1 / -1; border:0; border-radius:0; padding:0 0 18px; background:transparent; }
+.opd-referral-list-layout .cho-filter-panel > h2 { display:none; }
+.opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout .cho-filter-panel > label { flex:0 1 180px; margin:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout .cho-filter-panel > label:first-of-type { flex-basis:330px; order:-2; }
+.opd-referral-list-layout:not(.filters-open) .cho-filter-panel > label:not(:first-of-type), .opd-referral-list-layout:not(.filters-open) .cho-filter-panel > .filter-button { display:none; }
+.opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout .cho-filter-panel > button { width:auto; margin:0; min-height:38px; padding:8px 12px; }
+.opd-list-filter-toggle { order:-1; display:inline-flex; align-items:center; justify-content:center; gap:7px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; cursor:pointer; }
+.opd-referral-list-layout .cho-patient-list-panel { border-radius:7px; }
+.opd-referral-list-layout.has-details .cho-patient-list-panel { border-radius:7px 0 0 7px; }
+.opd-referral-list-layout .cho-medicine-request-table tr { cursor:pointer; }
+.opd-referral-list-layout .cho-medicine-request-table tr.is-selected { background:#eaf3fc; box-shadow:inset 3px 0 #2784c6; }
+.opd-list-patient-name { display:flex; align-items:center; gap:10px; text-align:left; border:0; background:transparent; color:inherit; font:inherit; cursor:pointer; }
+.opd-list-avatar { display:inline-flex !important; align-items:center; justify-content:center; width:32px; height:32px; border-radius:50%; background:#d9eaf7; color:#255e8e !important; font-size:11px !important; flex-shrink:0; }
+.opd-list-patient-name small { display:block; font-size:10px; color:#8190a0; margin-top:4px; }
+.opd-list-pagination { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding-top:18px; }
+.opd-list-pagination button { min-height:32px; padding:6px 10px; border:1px solid #d4e3ef; border-radius:5px; background:#fff; color:#176baf; font:inherit; font-size:12px; cursor:pointer; }
+.opd-list-pagination button:disabled { opacity:.45; cursor:default; }
+.opd-list-pagination nav, .opd-list-pagination nav > span { display:inline-flex; align-items:center; gap:5px; }
+.opd-list-pagination button[aria-current="page"] { color:#fff; background:#176baf; border-color:#176baf; }
+.opd-referral-details-panel { min-width:0; padding:20px; border:1px solid #dce6ef; border-left:0; border-radius:0 7px 7px 0; background:#f5faff; }
+.opd-referral-details-panel > header { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.opd-referral-details-panel h2 { margin:0; color:#374c60; font-size:16px; font-weight:600; }
+.opd-referral-details-panel header p { color:#718396; font-size:11px; }
+.opd-referral-details-panel > header > button { border:0; background:transparent; color:#718396; cursor:pointer; }
+.opd-shell .opd-referral-ui .opd-referral-details-panel .referral-log { padding:12px 0; }
+.opd-referral-details-panel .referral-log p { overflow-wrap:anywhere; }
+.opd-referral-details-panel .referral-log p > strong { display:block; font-size:10px; color:#8190a0; margin-bottom:4px; }
+.opd-referral-details-panel .patient-form-actions { display:flex; justify-content:flex-end; padding-top:12px; }
+.opd-shell .opd-referral-ui .opd-referral-details-panel { padding:16px; align-self:start; background:#f7fbff; max-height:calc(100dvh - 110px); overflow-y:auto; }
+.opd-referral-details-panel > header { align-items:center; margin-bottom:16px; }
+.opd-referral-details-panel > header h2 { font-size:13px; }
+.opd-referral-details-panel > header > button { width:28px; height:28px; display:grid; place-items:center; border-radius:4px; }
+.opd-referral-details-panel > header > button:hover { background:#e5f0fa; color:#176baf; }
+.opd-detail-identity { display:flex; align-items:center; gap:10px; padding:12px; border:1px solid #dce8f3; border-radius:7px; background:#eef5fc; }
+.opd-detail-identity > div { flex:1; min-width:0; }
+.opd-detail-identity h3 { margin:0 0 4px; font-size:12px; color:#284764; overflow-wrap:anywhere; }
+.opd-detail-identity p { margin:0; font-size:10px; color:#718396; }
+.opd-detail-status { color:#176baf; background:#dcecf9; padding:4px 7px; border-radius:4px; font-size:10px; text-transform:capitalize; overflow-wrap:anywhere; }
+.opd-referral-details-panel .opd-detail-heading { margin:20px 0 12px; font-size:12px; font-weight:600; color:#284764; }
+.opd-detail-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 14px; margin:0; }
+.opd-detail-grid dt { display:flex; align-items:center; gap:5px; color:#7c8da0; font-size:10px; margin-bottom:5px; }
+.opd-detail-grid dd { margin:0; color:#34516b; font-size:11px; line-height:1.6; overflow-wrap:anywhere; }
+.opd-detail-tabs { display:flex; gap:16px; overflow-x:auto; border-bottom:1px solid #dce6ef; margin:22px 0 0; }
+.opd-detail-tabs button { flex-shrink:0; border:0; border-bottom:2px solid transparent; padding:10px 0; background:transparent; color:#7b8da0; font:inherit; font-size:10px; cursor:pointer; }
+.opd-detail-tabs button[aria-pressed="true"] { color:#176baf; border-bottom-color:#176baf; }
+.opd-detail-content { padding-top:12px; }
+.opd-detail-note { color:#7c8da0; font-size:10px; line-height:1.6; margin:0 0 12px; }
+.opd-detail-vitals { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:0; }
+.opd-detail-vitals > div { display:flex; align-items:center; gap:8px; min-width:0; padding:10px 8px; border:1px solid #e0eaf2; border-radius:4px; background:#fff; }
+.opd-detail-vital-icon { display:grid; place-items:center; width:26px; height:28px; flex-shrink:0; color:#176baf; background:#f0f6fc; border-radius:4px; }
+.opd-detail-vitals dt { font-size:9px; color:#7c8da0; margin-bottom:4px; }
+.opd-detail-vitals dd { font-size:11px; color:#34516b; margin:0; overflow-wrap:anywhere; }
+.opd-detail-record { padding:12px; background:#fff; border:1px solid #e0eaf2; border-radius:5px; margin-bottom:10px; }
+.opd-detail-record h3 { font-size:12px; color:#34516b; margin:0 0 12px; }
+@media(max-width:480px) { .opd-detail-grid { grid-template-columns:1fr; } .opd-detail-identity { flex-wrap:wrap; } }
+@media(max-width:1100px) { .opd-shell .opd-referral-ui .opd-manage-referrals.opd-referral-list-layout.has-details .cho-medicine-request-page { grid-template-columns:minmax(0,1fr); } .opd-referral-details-panel { border-left:1px solid #dce6ef; border-top:0; border-radius:0 0 7px 7px; } }

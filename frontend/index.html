@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2f80ed" />
+    <meta name="description" content="MediCena health referral, medicine, GIS, analytics, and patient coordination system." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="MediCena" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" href="/pwa-icon.svg" />
+    <title>MediCena</title>
+    <script type="module">
+      if (['localhost', '127.0.0.1'].includes(location.hostname) && location.port === '5173' && 'serviceWorker' in navigator) {
+        const hadController = Boolean(navigator.serviceWorker.controller)
+        const registrations = await navigator.serviceWorker.getRegistrations()
+        await Promise.all(registrations.map((registration) => registration.unregister()))
+        if ('caches' in window) {
+          const cacheNames = await caches.keys()
+          await Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName)))
+        }
+        if (hadController && sessionStorage.getItem('MediCena-dev-cache-cleared') !== '1') {
+          sessionStorage.setItem('MediCena-dev-cache-cleared', '1')
+          location.reload()
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

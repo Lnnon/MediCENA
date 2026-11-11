@@ -1,0 +1,35 @@
+# Local credentials and deployment settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+DEV_LOGIN_CREDENTIALS.md
+/backend/core/management/commands/sync_dev_login_credentials.py
+*.pem
+*.key
+
+# Local data and database exports
+*.sqlite3*
+*.backup
+*.dump
+*.bak
+*.sql
+/backend/media/
+/private-data/
+
+# Python runtime and test outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+venv_old/
+/backend/staticfiles/
+
+# Frontend dependencies and generated builds
+node_modules/
+dist/
+/frontend/public/ocr/
+*.log

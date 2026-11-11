@@ -1,0 +1,52 @@
+.opd-shell .cho-main .patient-modal.opd-medical-sheet-modal { width:min(900px,100%); }
+.opd-medical-sheet { padding:24px; background:#fff; color:#34495e; }
+.opd-sheet-identification { display:grid; grid-template-columns:1fr 1.5fr 1fr; gap:14px; padding:14px; background:#edf6fd; border:1px solid #cfe2f2; border-radius:5px; margin-bottom:20px; }
+.opd-sheet-identification span { display:block; font-size:10px; color:#718396; margin-bottom:6px; }
+.opd-sheet-identification strong { color:#234e70; font-size:12px; font-weight:600; }
+.opd-sheet-section { margin-bottom:16px; border:1px solid #cfdeeb; border-radius:4px; overflow:hidden; }
+.opd-sheet-section > h3 { margin:0; padding:10px 14px; border-bottom:1px solid #cfdeeb; background:#f0f6fb; color:#234e70; font-size:12px; font-weight:650; letter-spacing:.04em; text-transform:uppercase; }
+.opd-sheet-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); margin:0; }
+.opd-sheet-vitals { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:0; }
+.opd-sheet-fields > div, .opd-sheet-vitals > div { padding:13px 14px; border-right:1px solid #e7eef5; border-bottom:1px solid #e7eef5; }
+.opd-sheet-wide { grid-column:1 / -1; }
+.opd-medical-sheet dt { font-size:10px; color:#8190a0; margin-bottom:6px; }
+.opd-medical-sheet dd { margin:0; color:#34495e; font-size:12px; font-weight:500; line-height:1.6; overflow-wrap:anywhere; white-space:pre-wrap; }
+.opd-sheet-note { font-size:11px; color:#8190a0; line-height:1.6; margin:18px 0 0; }
+@media(max-width:600px) { .opd-medical-sheet { padding:16px; } .opd-sheet-identification { grid-template-columns:1fr; } .opd-sheet-vitals { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
+.opd-shell .cho-main.opd-content-page .patient-modal.opd-medical-sheet-modal {
+  width: 100%;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100dvh - 20px);
+}
+.opd-shell .opd-medical-sheet-modal .opd-medical-sheet {
+  display: grid;
+  gap: 18px;
+  padding: clamp(16px, 2vw, 32px);
+}
+.opd-shell .opd-medical-sheet-modal :is(.opd-sheet-identification,.opd-sheet-section,.opd-sheet-note) { margin: 0; }
+.opd-shell .opd-medical-sheet-modal :is(dt,.opd-sheet-identification span,.opd-sheet-note) { font-size: 14px; color: #42596e; }
+.opd-shell .opd-medical-sheet-modal :is(dd,.opd-sheet-identification strong,.opd-sheet-section > h3) { font-size: 16px; line-height: 1.5; }
+.opd-recorded-vitals form .opd-sheet-vitals { padding: 16px; gap: 20px clamp(16px, 2vw, 32px); }
+.opd-recorded-vitals label { display: grid; gap: 8px; min-width: 0; color: #364f65; font-size: 15px; }
+.opd-recorded-vitals input { min-width: 0; width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid #b6cddd; border-radius: 6px; font: inherit; box-sizing: border-box; }
+.opd-recorded-vitals p[role=status] { padding: 0 16px; }
+@media (min-width: 900px) {
+  .opd-shell .opd-medical-sheet-modal .opd-medical-sheet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .opd-shell .opd-medical-sheet-modal :is(.opd-sheet-identification,.opd-recorded-vitals,.opd-sheet-note) { grid-column: 1 / -1; }
+  .opd-recorded-vitals .opd-sheet-vitals { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .opd-shell .opd-medical-sheet-modal :is(.opd-sheet-vitals,.opd-sheet-fields) { grid-template-columns: 1fr; }
+}
+
+.opd-shell .cho-main.opd-content-page .patient-modal.opd-medical-sheet-modal > header > button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.opd-shell .cho-main .opd-medical-sheet-modal .opd-recorded-vitals form .patient-form-actions {
+  padding: 16px;
+}

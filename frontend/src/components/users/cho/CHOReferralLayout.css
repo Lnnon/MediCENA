@@ -1,0 +1,41 @@
+/* Referral oversight retains its existing register and doctor-card layouts. */
+.cho-referral-styled { color:#374151; font-size:13px; }
+.cho-referral-styled .cho-page-heading h1 { margin:5px 0; font-size:23px; font-weight:650; line-height:1.3; color:#303f50; }
+.cho-referral-styled .cho-page-heading span { color:#176baf; font-size:10px; letter-spacing:.06em; }
+.cho-referral-styled .cho-page-heading p { color:#718396; font-size:12px; line-height:1.6; }
+.cho-referral-styled .cho-monitor-stats { gap:14px; margin-bottom:20px; }
+.cho-referral-styled .cho-stat-card { display:grid; grid-template-columns:1fr auto; justify-items:start; align-content:center; gap:8px; min-height:114px; padding:18px; background:#fff; border:1px solid #dce6ef; border-radius:7px; box-shadow:none; text-align:left; }
+.cho-referral-styled .cho-stat-icon { grid-column:2; grid-row:1 / 3; width:38px; height:38px; background:#eaf4fc; color:#176baf; border-radius:8px; }
+.cho-referral-styled .cho-stat-icon svg { width:20px; height:20px; }
+.cho-referral-styled .cho-stat-card > span { grid-column:1; grid-row:1; font-size:11px; font-weight:500; color:#718396; }
+.cho-referral-styled .cho-stat-card > strong { grid-column:1; grid-row:2; font-size:25px; font-weight:650; color:#234e70; }
+.cho-referral-styled .cho-panel { min-width:0; padding:20px; background:#fff; border:1px solid #dce6ef; border-radius:7px; box-shadow:none; }
+.cho-referral-styled .cho-panel > h2 { font-size:15px; font-weight:600; color:#374c60; margin:20px 0 14px; }
+.cho-referral-styled .cho-monitor-toolbar { gap:12px; align-items:center; padding-bottom:18px; border-bottom:1px solid #e5edf4; }
+.cho-referral-styled .cho-monitor-toolbar label { min-height:38px; border:1px solid #d4e3ef; background:#fafcfe; border-radius:6px; padding:0 10px; color:#718396; }
+.cho-referral-styled .cho-monitor-toolbar input { border:0; background:transparent; font:inherit; font-size:12px; color:#40566b; }
+.cho-referral-styled .cho-monitor-toolbar select { min-height:38px; padding:8px 12px; background:#fff; border:1px solid #d4e3ef; border-radius:6px; color:#40566b; font:inherit; font-size:12px; }
+.cho-referral-styled .cho-monitor-toolbar label:focus-within { outline:2px solid #bfdcf0; outline-offset:1px; border-color:#4296d2; background:#f5faff; color:#176baf; }
+.cho-referral-styled .cho-monitor-toolbar input:focus,
+.cho-referral-styled .cho-monitor-toolbar input:focus-visible { outline:none; box-shadow:none; border:0; background:transparent; }
+.cho-referral-styled .cho-medicine-request-table-wrap { border:1px solid #e0e7ee; border-radius:5px; overflow:auto; }
+.cho-referral-styled .cho-medicine-request-table { border-collapse:collapse; width:100%; }
+.cho-referral-styled .cho-medicine-request-table th { background:#f0f4f8; color:#405b71; font-size:11px; font-weight:600; padding:13px 12px; white-space:nowrap; }
+.cho-referral-styled .cho-medicine-request-table td { padding:14px 12px; border-bottom:1px solid #e6ebf0; font-size:12px; line-height:1.5; color:#40566b; vertical-align:middle; }
+.cho-referral-styled .cho-medicine-request-table td strong { font-weight:600; font-size:12px; }
+.cho-referral-styled .cho-medicine-request-table td > span:not(.cho-request-status) { color:#7b8896; font-size:11px; }
+.cho-referral-styled .cho-medicine-request-table tbody tr:hover { background:#f5faff; }
+.cho-referral-styled .cho-request-status { border-radius:5px; font-size:10px; padding:4px 8px; font-weight:500; }
+.cho-referral-styled .request-view-button { display:inline-flex; align-items:center; justify-content:center; min-height:34px; padding:7px 12px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.cho-referral-styled .request-view-button:hover { background:#dceefb; }
+.cho-referral-styled .cho-monitor-doctor { min-width:0; border:1px solid #dce6ef; border-radius:7px; background:#fff; padding:18px; box-shadow:none; }
+.cho-referral-styled .cho-monitor-doctor .cho-panel-heading { padding-bottom:14px; margin-bottom:16px; border-bottom:1px solid #e5edf4; color:#176baf; }
+.cho-referral-styled .cho-monitor-doctor h2 { margin:4px 0; color:#374c60; font-size:16px; font-weight:600; }
+.cho-referral-styled .cho-monitor-doctor .cho-panel-heading span, .cho-referral-styled .cho-monitor-doctor p { color:#718396; font-size:11px; line-height:1.6; }
+.cho-referral-styled .cho-monitor-workload { gap:10px; }
+.cho-referral-styled .cho-monitor-workload > div { padding:12px; border:1px solid #e0eaf3; border-radius:5px; background:#f5faff; }
+.cho-referral-styled .cho-monitor-workload strong { color:#176baf; font-size:23px; font-weight:600; }
+.cho-referral-styled .cho-monitor-workload span { color:#718396; font-size:10px; line-height:1.5; }
+.cho-referral-styled button:focus-visible, .cho-referral-styled select:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+.cho-referral-styled .patient-alert { border:1px solid #bfdcf0; border-radius:6px; padding:12px; background:#eff7fd; color:#235a84; font-size:12px; }
+@media(max-width:760px) { .cho-referral-styled .cho-panel { padding:16px; } .cho-referral-styled .cho-monitor-toolbar label { width:100%; } }

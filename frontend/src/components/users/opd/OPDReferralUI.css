@@ -1,0 +1,57 @@
+/* Scoped to OPD referral pages; existing filter, table and workflow structure stays. */
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-page { display:grid; grid-template-columns:250px minmax(0,1fr); align-items:start; gap:20px; margin:0; padding:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel { min-width:0; padding:18px; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel > label { display:grid; grid-template-columns:minmax(0,1fr); gap:7px; margin:0 0 16px; padding:0; min-width:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel > label > span { margin:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel > label > div { display:flex; align-items:center; gap:8px; padding:0 10px; height:38px; min-width:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel :is(input,select) { width:100%; min-width:0; min-height:38px; height:38px; padding:8px 10px; box-sizing:border-box; font:inherit; font-size:12px; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel > label > div input { height:34px; min-height:0; border:0; padding:6px 0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel svg { flex-shrink:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-filter-panel > .filter-button { width:100%; margin:0; min-height:38px; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-patient-list-panel { min-width:0; overflow:hidden; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-table-wrap { width:100%; max-width:100%; overflow-x:auto; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-table { width:100%; min-width:960px; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-table th { vertical-align:middle; white-space:nowrap; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-table td { vertical-align:middle; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-table :is(th,td):last-child { width:150px; text-align:left; white-space:nowrap; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-request-actions { justify-content:flex-start; flex-wrap:nowrap; gap:7px; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-request-actions button { min-width:58px; min-height:32px; padding:7px 10px; white-space:nowrap; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-table td:nth-child(3) { min-width:160px; max-width:240px; overflow-wrap:anywhere; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .patient-modal form { min-width:0; }
+.opd-shell .opd-referral-ui .opd-manage-referrals .patient-modal textarea { resize:vertical; }
+@media(max-width:1100px) { .opd-shell .opd-referral-ui .opd-manage-referrals .cho-medicine-request-page { grid-template-columns:minmax(0,1fr); } }
+.opd-referral-summary { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:20px; }
+.opd-referral-summary article { flex:1 1 180px; display:flex; align-items:center; justify-content:space-between; gap:12px; background:#fff; border:1px solid #dce6ef; border-radius:7px; padding:18px; }
+.opd-referral-summary span { font-size:12px; color:#718396; }
+.opd-referral-summary strong { font-size:24px; font-weight:600; color:#176baf; }
+.opd-shell .opd-referral-ui :is(.cho-medicine-request-page,.cho-incoming-page) { margin-top:0; padding-top:0; align-items:start; }
+.opd-shell .opd-referral-ui .cho-filter-panel { padding:18px; background:#fff; border:1px solid #dce6ef; border-radius:8px; }
+.opd-shell .opd-referral-ui .cho-filter-panel h2 { margin-top:0; margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid #e5edf4; }
+.opd-shell .opd-referral-ui .cho-filter-panel label { margin-bottom:14px; }
+.opd-shell .opd-referral-ui .cho-filter-panel label > span { display:block; margin-bottom:7px; }
+.opd-shell .opd-referral-ui .cho-filter-panel :is(select,input) { font-family:inherit; font-size:12px; }
+.opd-shell .opd-referral-ui .cho-patient-list-panel { min-width:0; padding:20px; border-radius:8px; }
+.opd-shell .opd-referral-ui .cho-patient-list-panel > h2 { margin-top:0; padding-bottom:14px; border-bottom:1px solid #e5edf4; }
+.opd-shell .opd-referral-ui .cho-medicine-request-table { min-width:850px; }
+.opd-shell .opd-referral-ui .cho-medicine-request-table td > strong { display:block; margin-bottom:4px; }
+.opd-shell .opd-referral-ui .cho-medicine-request-table td > span:not(.cho-request-status) { display:block; font-size:11px; color:#7b8896; }
+.opd-shell .opd-referral-ui .cho-request-actions { display:flex; align-items:center; gap:7px; flex-wrap:nowrap; }
+.opd-shell .opd-referral-ui .cho-incoming-title { color:#374c60; font-size:16px; font-weight:600; }
+.opd-shell .opd-referral-ui .cho-incoming-card { border:1px solid #dce6ef; border-radius:8px; background:#fff; box-shadow:none; }
+.opd-shell .opd-referral-ui .incoming-card-icon { background:#eaf4fc; color:#176baf; border-radius:8px; }
+.opd-shell .opd-referral-ui .incoming-card-body h3 { font-size:15px; font-weight:600; color:#374c60; }
+.opd-shell .opd-referral-ui .incoming-card-body p { font-size:12px; color:#718396; line-height:1.6; }
+.opd-shell .opd-referral-ui .incoming-card-actions { gap:8px; }
+.opd-shell .opd-referral-ui :is(.view-all-button,.primary-action-button) { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:34px; padding:8px 12px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; cursor:pointer; }
+.opd-shell .opd-referral-ui .primary-action-button { background:#176baf; border-color:#176baf; color:#fff; }
+.opd-shell .opd-referral-ui :is(.cho-warning-note,.cho-info-note) { border-radius:6px; font-size:12px; line-height:1.6; }
+.opd-shell .opd-referral-ui .cho-incoming-menu a { border-radius:6px; }
+.opd-shell .opd-referral-ui .cho-incoming-menu a.active { background:#eaf4fc; color:#176baf; }
+.opd-shell .opd-referral-ui .patient-modal { width:min(800px,100%); }
+.opd-shell .opd-referral-ui .referral-log { padding:20px; color:#40566b; font-size:12px; line-height:1.7; }
+.opd-shell .opd-referral-ui .referral-log p { margin:0; padding:11px 0; border-bottom:1px solid #edf2f7; }
+.opd-shell .opd-referral-ui .patient-form { padding:20px; }
+.opd-shell .opd-referral-ui .cho-assign-doctor-form { padding:20px; }
+.opd-shell .opd-referral-ui .assign-patient-summary { border:1px solid #cfe2f2; border-radius:6px; background:#edf6fd; color:#234e70; }
+.opd-shell .opd-referral-ui .cho-assign-doctor-form :is(input,select) { min-height:38px; border:1px solid #d4e3ef; border-radius:6px; font-family:inherit; font-size:13px; }
+@media(max-width:600px) { .opd-shell .opd-referral-ui .cho-patient-list-panel { padding:16px; } .opd-referral-summary article { padding:14px; } }

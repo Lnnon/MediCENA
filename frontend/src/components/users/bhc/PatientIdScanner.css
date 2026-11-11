@@ -1,0 +1,51 @@
+.bhc-add-patient-modal .patient-registration-heading { grid-column:1 / -1; display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:10px; border-bottom:1px solid #e3edf5; }
+.bhc-add-patient-modal .patient-registration-heading .bhc-form-section-title { border:0; padding:0; margin:0; }
+.patient-id-scan-control { position:relative; flex-shrink:0; }
+.patient-id-scan-button { display:inline-flex; align-items:center; gap:7px; min-height:34px; padding:7px 12px; border:0; border-radius:5px; color:#fff; background:#176baf; font-size:12px; cursor:pointer; }
+.patient-id-menu { position:absolute; right:0; top:calc(100% + 6px); width:min(290px,75vw); z-index:10; padding:6px; border:1px solid #d6e5f0; border-radius:8px; background:white; box-shadow:0 8px 24px #183a5b20; }
+.patient-id-menu button { display:flex; align-items:center; gap:12px; width:100%; padding:12px; border:0; border-radius:5px; text-align:left; background:#fff; color:#176baf; font-size:13px; cursor:pointer; }
+.patient-id-menu button:hover { background:#eef6fc; }
+.patient-id-menu small { display:block; margin-top:5px; font-size:11px; color:#718396; line-height:1.5; }
+.patient-id-applied { display:block; position:absolute; right:0; width:250px; padding:8px; border:1px solid #bad8eb; border-radius:5px; background:#eff8ff; color:#176baf; font-size:11px; z-index:3; }
+.patient-id-dialog { width:min(980px,calc(100vw - 32px)); max-height:calc(100dvh - 32px); padding:0; border:1px solid #d6e5f0; border-radius:12px; color:#34516b; background:#fff; box-shadow:0 24px 80px #183a5b30; font:13px Arial,sans-serif; }
+.patient-id-dialog::backdrop { background:#183a5b80; }
+.patient-id-dialog header,.patient-id-dialog footer { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:18px 24px; background:#f5faff; }
+.patient-id-dialog header { border-bottom:1px solid #d6e5f0; }
+.patient-id-dialog h2 { margin:0; color:#176baf; font-size:18px; }
+.patient-id-dialog header p { margin:7px 0 0; color:#718396; font-size:12px; }
+.patient-id-dialog button { display:inline-flex; justify-content:center; align-items:center; gap:7px; min-height:38px; padding:8px 14px; border:1px solid #cddfeb; border-radius:6px; background:#fff; color:#526c82; cursor:pointer; font:inherit; }
+.patient-id-dialog header > button { border:0; padding:6px; background:transparent; }
+.patient-id-dialog .id-primary { background:#176baf; color:#fff; border-color:#176baf; }
+.patient-id-dialog button:disabled { opacity:.5; cursor:not-allowed; }
+.patient-id-dialog :is(input,select) { width:100%; min-height:38px; padding:8px 10px; border:1px solid #d4e3ef; border-radius:5px; background:#fff; color:#34516b; font:inherit; }
+.patient-id-dialog :is(button,input,select):focus-visible,.patient-id-scan-control button:focus-visible { outline:2px solid #4296d2; outline-offset:2px; }
+.patient-id-body { padding:20px 24px; }
+.patient-id-dialog label { display:flex; flex-direction:column; gap:7px; font-size:12px; margin-bottom:12px; }
+.patient-id-type { max-width:400px; }
+.patient-id-workspace { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:24px; margin-top:20px; }
+.patient-id-source:only-child { grid-column:1 / -1; max-width:640px; width:100%; margin:auto; }
+.patient-id-preview { width:100%; max-height:300px; object-fit:contain; background:#f0f5f9; border-radius:6px; }
+.patient-id-camera { position:relative; overflow:hidden; background:#142b3d; border-radius:8px; aspect-ratio:16/10; }
+.patient-id-camera video { display:block; width:100%; height:100%; object-fit:contain; }
+.patient-id-guide { pointer-events:none; position:absolute; inset:15% 8%; border:2px dashed #fff; border-radius:8px; box-shadow:0 0 0 100px #0003; }
+.patient-id-source > p,.patient-id-review > p { font-size:12px; color:#718396; line-height:1.7; }
+.patient-id-source-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.patient-id-review h3 { font-size:14px; margin:0 0 10px; }
+.patient-id-dialog .patient-id-overwrite { flex-direction:row; align-items:flex-start; gap:8px; margin-top:16px; line-height:1.6; }
+.patient-id-overwrite input { width:16px; height:16px; min-height:0; flex-shrink:0; margin-top:2px; accent-color:#176baf; }
+.patient-id-error { border:1px solid #f0d0ac; padding:12px; background:#fff8ed; color:#865b23; border-radius:6px; line-height:1.7; }
+.patient-id-progress { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:18px; color:#176baf; }
+.patient-id-progress progress { width:100%; }
+.patient-id-privacy { font-size:11px; color:#718396; line-height:1.8; margin:18px 0 0; }
+.patient-id-dialog footer { justify-content:flex-end; position:sticky; bottom:0; border-top:1px solid #d6e5f0; }
+.bhc-add-patient-modal .id-autofilled { outline:2px solid #a4d5ed; outline-offset:1px; background:#f0faff !important; }
+@media(max-width:650px) { .patient-id-workspace { grid-template-columns:1fr; } .patient-id-dialog header,.patient-id-dialog footer,.patient-id-body { padding:16px; } .patient-id-dialog footer { flex-wrap:wrap; } }
+.patient-id-recognized { margin-top:16px; padding:12px; border:1px solid #d6e5f0; border-radius:6px; }
+.patient-id-recognized summary { cursor:pointer; color:#176baf; font-size:12px; }
+.patient-id-recognized pre { white-space:pre-wrap; overflow-wrap:anywhere; font:12px/1.7 Arial,sans-serif; max-height:180px; overflow-y:auto; }
+.patient-id-preview-frame { position:relative; overflow:hidden; border-radius:6px; }
+.patient-id-preview-frame .patient-id-preview { display:block; max-height:none; height:auto; }
+.patient-id-crop-guide { position:absolute; box-sizing:border-box; pointer-events:none; border:2px solid #1689e0; box-shadow:0 0 0 1000px #102b4255; }
+.patient-id-crop-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 14px; padding:12px; border:1px solid #d6e5f0; border-radius:6px; margin:10px 0; }
+.patient-id-crop-controls > p { grid-column:1 / -1; margin:0 0 8px; color:#62778a; font-size:11px; line-height:1.6; }
+.patient-id-crop-controls input[type="range"] { padding:0; min-height:24px; accent-color:#176baf; }

@@ -1,0 +1,162 @@
+/* A structured clinical sheet; original field names and submit handler are retained. */
+.bhc-patient-list-styled .bhc-medical-referral { width:min(940px,100%); max-height:calc(100dvh - 36px); border:1px solid #c8dbe9; border-radius:10px; background:white; box-shadow:0 22px 70px #17395c33; }
+.bhc-medical-referral > header { padding:20px 26px; min-height:90px; background:#f5faff; border-bottom:2px solid #176baf; align-items:flex-start; }
+.bhc-referral-eyebrow { display:block; margin-bottom:6px; font-size:10px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; color:#176baf; }
+.bhc-medical-referral > header h2 { font-size:22px; font-weight:650; color:#234e70; letter-spacing:.02em; }
+.bhc-medical-referral > header p { margin:6px 0 0; color:#718396; font-size:12px; }
+.bhc-medical-referral > header button { flex-shrink:0; background:#eaf4fc; color:#176baf; border:0; border-radius:6px; }
+.bhc-patient-list-styled .bhc-medical-referral .clinical-referral-form { display:block; padding:24px 26px; background:#fff; }
+.bhc-medical-referral .referral-form-summary { display:flex; align-items:center; gap:12px; padding:13px 16px; margin-bottom:18px; background:#edf6fd; border:1px solid #cfe2f2; border-radius:6px; color:#176baf; }
+.bhc-medical-referral .referral-form-summary strong { font-size:14px; font-weight:600; }
+.bhc-medical-referral .referral-form-summary span { margin-top:4px; color:#647e94; font-size:11px; }
+.bhc-referral-patient-info { border:1px solid #d4e3ef; border-radius:5px; margin-bottom:18px; overflow:hidden; }
+.bhc-referral-patient-info h3, .bhc-medical-referral .clinical-form-section > h3 { padding:10px 14px; margin:0; background:#f0f6fb; border-bottom:1px solid #d4e3ef; color:#234e70; font-size:12px; font-weight:650; text-transform:uppercase; letter-spacing:.035em; }
+.bhc-referral-patient-info dl { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin:0; }
+.bhc-referral-patient-info dl > div { padding:12px 14px; border-bottom:1px solid #edf2f6; }
+.bhc-referral-patient-info dt { font-size:10px; color:#8190a0; margin-bottom:5px; }
+.bhc-referral-patient-info dd { margin:0; color:#40566b; font-size:12px; font-weight:500; overflow-wrap:anywhere; }
+.bhc-medical-referral .clinical-form-section { display:block; padding:0; margin:0 0 18px; border:1px solid #d4e3ef; border-radius:5px; overflow:hidden; }
+.bhc-medical-referral .clinical-form-section > label, .bhc-medical-referral .clinical-form-section > fieldset, .bhc-medical-referral .clinical-radio-row, .bhc-medical-referral .vital-signs-grid { margin:0; padding:14px; }
+.bhc-medical-referral .clinical-referral-form label { border:0; min-height:0; font-size:12px; color:#40566b; }
+.bhc-medical-referral .clinical-referral-form label > span { font-size:11px; color:#647e94; font-weight:500; text-align:left; justify-self:start; }
+.bhc-medical-referral .clinical-referral-form input:not([type="radio"]), .bhc-medical-referral .clinical-referral-form select { width:100%; min-width:0; min-height:38px; padding:8px 10px; border:1px solid #cddfeb; border-radius:5px; font:inherit; font-size:12px; color:#34495e; background:#fff; }
+.bhc-medical-referral .clinical-referral-form input:focus, .bhc-medical-referral .clinical-referral-form select:focus { border-color:#4296d2; outline:2px solid #dceefb; }
+.bhc-medical-referral .specialty-choice-group { display:flex; flex-wrap:wrap; gap:10px 18px; border:0; }
+.bhc-medical-referral .specialty-choice-group legend { width:auto; float:none; margin:0 0 10px; padding:0; text-align:left; color:#647e94; font-size:11px; }
+.bhc-medical-referral .specialty-choice-group label, .bhc-medical-referral .clinical-radio-row fieldset label { display:inline-flex; align-items:center; gap:7px; padding:5px 0; }
+.bhc-medical-referral input[type="radio"] { accent-color:#176baf; width:14px; height:14px; margin:0; }
+.bhc-medical-referral .chief-complaint-select, .bhc-medical-referral .clinical-inline-field { display:grid; grid-template-columns:150px minmax(0,1fr); gap:12px; align-items:center; }
+.bhc-medical-referral .vital-signs-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.bhc-medical-referral .vital-signs-grid label { display:grid; grid-template-columns:1fr; gap:7px; padding:0; }
+.bhc-medical-referral .vital-signs-grid label > span { text-align:left; }
+.bhc-medical-referral .clinical-radio-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.bhc-medical-referral .clinical-radio-row > label { display:grid; grid-template-columns:1fr; gap:7px; padding:0; }
+.bhc-medical-referral .clinical-radio-row fieldset { display:flex; gap:14px; padding:0; border:0; }
+.bhc-medical-referral .clinical-radio-row legend { width:auto; margin:0 0 8px; padding:0; text-align:left; color:#647e94; font-size:11px; }
+.bhc-medical-referral .referred-by-section { padding:16px; background:#fafcfe; }
+.bhc-medical-referral .clinical-line-field { display:grid; grid-template-columns:150px minmax(0,1fr); gap:12px; border:0; }
+.bhc-medical-referral .clinical-line-field input[readonly] { background:#f3f7fa; }
+.bhc-medical-referral .patient-form-actions { display:flex; justify-content:flex-end; gap:12px; padding:18px 0 0; margin:0; border-top:1px solid #dce9f3; }
+.bhc-medical-referral .patient-form-actions button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:40px; padding:9px 18px; border:1px solid #c8ddeb; border-radius:6px; background:#fff; color:#607589; font:inherit; font-size:12px; }
+.bhc-patient-list-styled .bhc-medical-referral .patient-form-actions button[type="button"] { background:#edf6fd; border-color:#b8d5eb; color:#176baf; }
+.bhc-patient-list-styled .bhc-medical-referral .patient-form-actions button[type="button"]:hover { background:#dceefb; border-color:#176baf; color:#12578f; filter:none; }
+.bhc-patient-list-styled .bhc-medical-referral .patient-form-actions button[type="submit"] { background:#176baf; border-color:#176baf; color:#fff; }
+.bhc-patient-list-styled .bhc-medical-referral .patient-form-actions button[type="submit"]:hover { background:#12578f; border-color:#12578f; color:#fff; filter:none; }
+.bhc-patient-list-styled .bhc-medical-referral .patient-form-actions button:focus-visible { outline:2px solid #176baf; outline-offset:3px; }
+@media(max-width:700px) { .bhc-medical-referral > header { padding:18px; } .bhc-patient-list-styled .bhc-medical-referral .clinical-referral-form { padding:18px; } .bhc-referral-patient-info dl, .bhc-medical-referral .vital-signs-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .bhc-medical-referral .clinical-radio-row { grid-template-columns:1fr; } .bhc-medical-referral .chief-complaint-select, .bhc-medical-referral .clinical-inline-field, .bhc-medical-referral .clinical-line-field { grid-template-columns:1fr; gap:8px; } }
+.bhc-medical-referral .vital-signs-grid input::placeholder {
+  color:#b0b8c2;
+  opacity:1;
+}
+
+/* Wide, stepped layout matching the patient registration dialog. */
+.bhc-patient-list-styled .bhc-medical-referral {
+  width: min(1140px, 100%);
+  max-height: calc(100dvh - 48px);
+}
+.bhc-patient-list-styled .bhc-medical-referral > header {
+  min-height: 100px;
+  padding: 20px 24px;
+  align-items: center;
+  border-bottom: 1px solid #dce9f3;
+}
+.bhc-patient-list-styled .bhc-medical-referral > header > div {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.bhc-patient-list-styled .bhc-medical-referral > header h2 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.3;
+}
+.bhc-patient-list-styled .bhc-medical-referral > header p {
+  margin: 0;
+  line-height: 1.5;
+}
+.bhc-patient-list-styled .bhc-medical-referral .clinical-referral-form {
+  display: block;
+  padding: 0 24px 16px;
+}
+.bhc-medical-referral .referral-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 20px 0 16px;
+  border-bottom: 1px solid #dce9f3;
+}
+.bhc-medical-referral .referral-steps li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #8190a0;
+  font-size: 12px;
+}
+.bhc-medical-referral .referral-steps li > span {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #edf2f7;
+}
+.bhc-medical-referral .referral-steps li[aria-current] { color: #176baf; }
+.bhc-medical-referral .referral-steps li[aria-current] > span { background: #176baf; color: white; }
+.bhc-medical-referral .referral-step-panel[hidden] { display: none; }
+.bhc-medical-referral .referral-form-summary { margin-bottom: 12px; padding: 9px 12px; }
+.bhc-medical-referral .clinical-form-section,
+.bhc-medical-referral .bhc-referral-patient-info {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 12px;
+  overflow: visible;
+}
+.bhc-medical-referral .clinical-form-section > h3,
+.bhc-medical-referral .bhc-referral-patient-info h3 {
+  background: white;
+  padding: 10px 0;
+  color: #176baf;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.bhc-medical-referral .clinical-form-section > label,
+.bhc-medical-referral .clinical-form-section > fieldset,
+.bhc-medical-referral .clinical-radio-row,
+.bhc-medical-referral .vital-signs-grid { padding: 12px 0; }
+.bhc-medical-referral .bhc-referral-patient-info dl > div { padding: 10px 0; }
+.bhc-medical-referral .bhc-referral-patient-info dl { column-gap: 20px; }
+.bhc-medical-referral .referred-by-section { background: white; }
+.bhc-medical-referral .patient-form-actions { padding-top: 16px; }
+.bhc-medical-referral .referral-purpose-section .specialty-choice-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  padding: 16px 0;
+}
+.bhc-medical-referral .referral-purpose-section .specialty-choice-group label {
+  min-height: 28px;
+  font-weight: 500;
+}
+.bhc-medical-referral .referral-purpose-section .specialty-choice-group legend {
+  margin: 0;
+  padding-top: 12px;
+}
+@media (min-width: 960px) {
+  .bhc-medical-referral .referral-step-panel:not([hidden]) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    align-items: start;
+  }
+  .bhc-medical-referral .referral-step-panel > * { min-width: 0; }
+  .bhc-medical-referral .referral-form-summary,
+  .bhc-medical-referral .bhc-referral-patient-info,
+  .bhc-medical-referral .referral-vitals-section,
+  .bhc-medical-referral .patient-form-actions { grid-column: 1 / -1; }
+  .bhc-medical-referral .clinical-inline-field,
+  .bhc-medical-referral .chief-complaint-select { grid-template-columns: 1fr; gap: 8px; }
+  .bhc-medical-referral .clinical-radio-row { gap: 12px; }
+  .bhc-medical-referral .clinical-radio-row > label > span { white-space: normal; }
+}

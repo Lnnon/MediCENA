@@ -1,0 +1,463 @@
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+}
+
+.landing-menu-button,
+.mobile-nav-backdrop,
+.mobile-sidebar-header {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .landing-menu-button,
+  .bhc-menu-button,
+  .cho-menu-button,
+  .doc-menu-button,
+  .patient-menu-button,
+  .mobile-nav-backdrop,
+  .mobile-sidebar-header {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .app,
+  .bhc-shell,
+  .cho-shell,
+  .doc-shell,
+  .patient-shell {
+    min-height: 100dvh;
+  }
+
+  .bhc-topnav,
+  .cho-topnav,
+  .doc-topnav,
+  .patient-topnav,
+  .bhc-nav-list,
+  .cho-nav-list,
+  .doc-nav-list,
+  .patient-nav-list,
+  .bhc-main,
+  .cho-main,
+  .doc-main,
+  .patient-main,
+  .navbar-inner,
+  .hero-content,
+  .services-inner,
+  .tutorial-inner,
+  .faq-inner,
+  .testimonials-inner,
+  .feedback-inner,
+  .footer-inner {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .bhc-topnav,
+  .cho-topnav,
+  .doc-topnav,
+  .patient-topnav {
+    min-height: 58px;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 9px;
+    padding: 9px 0;
+  }
+
+  .bhc-brand img,
+  .cho-brand img,
+  .doc-brand img,
+  .patient-brand img,
+  .brand img {
+    width: 108px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .bhc-notification-wrap,
+  .cho-notification-wrap,
+  .doc-notification-wrap,
+  .patient-notification-wrap,
+  .bhc-notification,
+  .cho-notification,
+  .doc-notification,
+  .patient-notification {
+    grid-column: 2;
+  }
+
+  .bhc-profile,
+  .cho-profile,
+  .doc-profile,
+  .patient-profile {
+    grid-column: 3;
+    max-width: 42px;
+    min-width: 38px;
+    overflow: hidden;
+    gap: 0;
+  }
+
+  .bhc-profile > div:last-child,
+  .cho-profile > div:last-child,
+  .doc-profile > div:last-child,
+  .patient-profile > div:last-child {
+    display: none;
+  }
+
+  .bhc-avatar,
+  .cho-avatar,
+  .doc-avatar,
+  .patient-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .bhc-notification-menu,
+  .cho-notification-menu,
+  .doc-notification-menu,
+  .patient-notification-menu {
+    right: -50px;
+    width: min(320px, calc(100vw - 20px));
+    max-height: min(420px, calc(100dvh - 96px));
+  }
+
+  .bhc-nav-list,
+  .cho-nav-list,
+  .doc-nav-list,
+  .patient-nav-list,
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4200;
+    width: min(82vw, 320px);
+    height: 100dvh;
+    display: grid;
+    align-content: start;
+    gap: 4px;
+    margin: 0;
+    padding: 14px 12px 22px;
+    border-right: 1px solid var(--line);
+    background: #ffffff;
+    box-shadow: 18px 0 36px rgba(15, 47, 74, 0.18);
+    overflow-y: auto;
+    transform: translateX(-104%);
+    transition: transform 0.22s ease;
+  }
+
+  .nav-menu {
+    border-right: 1px solid #edf1f6;
+  }
+
+  .bhc-nav-list.is-open,
+  .cho-nav-list.is-open,
+  .doc-nav-list.is-open,
+  .patient-nav-list.is-open,
+  .nav-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 4100;
+    display: none;
+    border: 0;
+    background: rgba(15, 47, 74, 0.38);
+  }
+
+  .mobile-nav-backdrop.is-open {
+    display: block;
+  }
+
+  .mobile-sidebar-header {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+    padding: 0 2px 10px;
+    border-bottom: 1px solid #edf1f6;
+    color: var(--navy, #17395c);
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .mobile-sidebar-header button {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #ffffff;
+    color: var(--btn-primary);
+    cursor: pointer;
+  }
+
+  .bhc-nav-list > li,
+  .cho-nav-list > li,
+  .doc-nav-list > li,
+  .patient-nav-list > li,
+  .nav-menu > li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .bhc-nav-list a,
+  .bhc-nav-list > li > button,
+  .bhc-dropdown button,
+  .cho-nav-list a,
+  .cho-nav-list > li > button,
+  .cho-dropdown button,
+  .doc-nav-list a,
+  .doc-nav-list > li > button,
+  .doc-dropdown button,
+  .patient-nav-list a,
+  .patient-nav-list > li > button,
+  .patient-dropdown button {
+    width: 100%;
+    min-height: 42px;
+    justify-content: flex-start;
+    padding-inline: 12px;
+    border-radius: 4px;
+    white-space: normal;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    min-height: 40px;
+    padding-inline: 12px;
+  }
+
+  .bhc-dropdown,
+  .cho-dropdown,
+  .doc-dropdown,
+  .patient-dropdown {
+    position: static;
+    min-width: 0;
+    display: none;
+    gap: 3px;
+    padding: 3px 0 5px 18px;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .has-dropdown:hover .bhc-dropdown,
+  .has-dropdown:focus-within .bhc-dropdown,
+  .has-dropdown:hover .cho-dropdown,
+  .has-dropdown:focus-within .cho-dropdown,
+  .has-dropdown:hover .doc-dropdown,
+  .has-dropdown:focus-within .doc-dropdown,
+  .has-dropdown:hover .patient-dropdown,
+  .has-dropdown:focus-within .patient-dropdown {
+    display: grid;
+  }
+
+  .nav-chevron {
+    margin-left: auto;
+  }
+
+  .bhc-main,
+  .cho-main,
+  .doc-main,
+  .patient-main {
+    padding: 20px 0 84px;
+  }
+
+  .bhc-page-heading,
+  .cho-page-heading,
+  .doc-page-heading,
+  .patient-page-heading {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .bhc-page-heading h1,
+  .cho-page-heading h1,
+  .doc-page-heading h1,
+  .patient-page-heading h1 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .bhc-date-card,
+  .cho-date-card,
+  .doc-date-card,
+  .patient-date-card {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bhc-stats-grid,
+  .cho-stats-grid,
+  .doc-stats-grid,
+  .patient-stats-grid,
+  .bhc-content-grid,
+  .cho-content-grid,
+  .doc-content-grid,
+  .patient-content-grid,
+  .bhc-settings-grid,
+  .cho-settings-grid,
+  .doc-settings-grid,
+  .patient-settings-grid,
+  .bhc-patient-page,
+  .cho-patient-page,
+  .doc-patient-page,
+  .bhc-referral-page,
+  .cho-referral-page,
+  .doc-referral-page,
+  .patient-referral-history-page,
+  .doc-consultation-page,
+  .cho-online-page,
+  .reports-page,
+  .profile-page,
+  .analytics-dashboard-grid,
+  .analytics-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bhc-panel,
+  .cho-panel,
+  .doc-panel,
+  .patient-panel,
+  .bhc-stat-card,
+  .cho-stat-card,
+  .doc-stat-card,
+  .patient-stat-card,
+  .bhc-filter-panel,
+  .cho-filter-panel,
+  .doc-filter-panel,
+  .patient-referral-filter,
+  .doc-consultation-queue,
+  .doc-consultation-summary,
+  .doc-consultation-panel {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .bhc-table-row,
+  .cho-table-row,
+  .doc-table-row,
+  .patient-table-row,
+  .cho-online-staff-card header,
+  .cho-online-contact,
+  .cho-online-staff-card footer,
+  .cho-online-patient-list > div {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .bhc-patient-table-wrap,
+  .cho-patient-list-panel .bhc-patient-table-wrap,
+  .doc-patient-list-panel .bhc-patient-table-wrap,
+  .cho-medicine-request-table-wrap,
+  .cho-manage-users-table-wrap,
+  .analytics-insight-table,
+  .reports-table-card {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bhc-patient-table,
+  .cho-patient-list-panel .bhc-patient-table,
+  .doc-patient-list-panel .bhc-patient-table,
+  .cho-medicine-request-table,
+  .cho-manage-users-table,
+  .analytics-insight-table table {
+    min-width: 640px;
+  }
+
+  .dashboard-leaflet-preview,
+  .dashboard-analytics-preview,
+  .cho-map-shell,
+  .analytics-main-chart {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .dashboard-leaflet-preview,
+  .dashboard-leaflet-container {
+    min-height: 240px;
+  }
+
+  .patient-modal-backdrop {
+    align-items: start;
+    padding: 10px;
+  }
+
+  .patient-modal,
+  .referral-modal,
+  .cho-user-form,
+  .profile-card {
+    width: min(100%, calc(100vw - 20px));
+    max-height: calc(100dvh - 20px);
+    overflow: auto;
+  }
+
+  .patient-form,
+  .medicine-form,
+  .profile-edit-form,
+  .doc-consultation-form,
+  .doc-vitals-grid,
+  .doc-prescription-fields,
+  .bhc-record-distribution-form,
+  .cho-distribution-form,
+  .analytics-top-grid,
+  .analytics-metric-grid,
+  .reports-summary-grid,
+  .reports-picker-grid,
+  .reports-chart-grid,
+  .profile-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pwa-install-button {
+    right: 12px;
+    bottom: 12px;
+    min-height: 40px;
+    padding-inline: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .bhc-notification-menu,
+  .cho-notification-menu,
+  .doc-notification-menu,
+  .patient-notification-menu {
+    right: -44px;
+  }
+
+  .login-card {
+    padding: 28px 18px 26px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p,
+  .tutorial-copy h2,
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .bhc-page-heading h1,
+  .cho-page-heading h1,
+  .doc-page-heading h1,
+  .patient-page-heading h1 {
+    font-size: 22px;
+  }
+}

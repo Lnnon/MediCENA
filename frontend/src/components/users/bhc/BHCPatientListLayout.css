@@ -1,0 +1,297 @@
+/* BHC patient content and workflows stay intact; visuals follow the CHO list. */
+.bhc-list-tabs { display:flex; gap:22px; border-bottom:1px solid #dce6ef; margin-bottom:16px; overflow-x:auto; flex-shrink:0; }
+.bhc-list-tabs button { display:inline-flex; align-items:center; gap:8px; padding:12px 0; border:0; border-bottom:2px solid transparent; background:transparent; color:#718396; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap; }
+.bhc-list-tabs button[aria-pressed="true"] { color:#176baf; border-bottom-color:#176baf; }
+.bhc-list-tabs button > span { padding:2px 7px; border-radius:12px; background:#e4eef7; font-size:10px; }
+.bhc-list-tabs button:disabled { opacity:.5; cursor:default; }
+.bhc-list-tab-note { margin:0 0 14px; color:#718396; font-size:11px; }
+.bhc-patient-list-styled .patient-row-actions { justify-content:flex-start; flex-wrap:nowrap; }
+.bhc-patient-list-styled .patient-row-actions .bhc-view-patient-button, .bhc-patient-options > summary { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; padding:0; border:1px solid #dce9f3; border-radius:5px; color:#176baf; background:#f5faff; cursor:pointer; list-style:none; }
+.bhc-patient-options > summary::-webkit-details-marker { display:none; }
+.bhc-patient-options { position:relative; }
+.bhc-patient-options-menu { position:absolute; top:34px; right:0; width:145px; display:grid; gap:5px; padding:7px; background:white; border:1px solid #dce6ef; border-radius:6px; box-shadow:0 5px 16px #17395c18; z-index:5; }
+.bhc-patient-list-styled .bhc-patient-options-menu button { width:100%; justify-content:flex-start; }
+.medical-workspace > .bhc-main.bhc-patients-main { padding:0; background:#f3f8fc; }
+.bhc-patient-list-styled .bhc-patient-split { height:calc(100dvh - 68px); min-height:0; grid-template-columns:minmax(0,1fr); }
+.bhc-patient-list-styled .bhc-patient-split .bhc-patient-list-panel { display:flex; flex-direction:column; min-height:0; padding:24px; border:0; border-radius:0; background:#f3f8fc; }
+.bhc-list-topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+.bhc-list-topbar h1 { margin:0; font-size:23px; font-weight:650; color:#303f50; }
+.bhc-list-topbar .add-patient-button { display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:8px 14px; border:1px solid #176baf; border-radius:6px; background:#176baf; color:white; font:inherit; font-size:12px; cursor:pointer; }
+.bhc-list-category { display:flex; align-items:center; gap:8px; padding:12px 0; border-bottom:2px solid #176baf; margin-bottom:14px; align-self:flex-start; color:#176baf; font-size:12px; }
+.bhc-list-category strong { padding:2px 7px; border-radius:12px; background:#e1eef8; font-size:10px; font-weight:500; }
+.bhc-list-search { display:flex; align-items:center; gap:8px; padding:0 10px; border:1px solid #d4e3ef; border-radius:6px; background:#fafcfe; width:min(360px,100%); min-height:36px; margin-bottom:18px; color:#718396; }
+.bhc-list-search input { width:100%; min-width:0; padding:8px 0; border:0; background:transparent; font:inherit; font-size:12px; }
+.bhc-list-search:focus-within { outline:2px solid #bfdcf0; }
+.bhc-list-search input:focus-visible { outline:none; }
+.bhc-patient-list-styled .bhc-patient-split .bhc-patient-table-wrap { flex:1; min-height:0; background:#fff; }
+.bhc-patient-list-styled .bhc-patient-split th { position:sticky; top:0; z-index:1; }
+.bhc-patient-list-styled .bhc-patient-split tbody tr { cursor:pointer; }
+.bhc-patient-list-styled .bhc-patient-split tr.is-selected { background:#eaf3fc; box-shadow:inset 3px 0 #2784c6; }
+.bhc-patient-list-styled .bhc-patient-identity { border:0; background:transparent; padding:0; text-align:left; color:inherit; font:inherit; cursor:pointer; }
+.bhc-list-pagination { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; padding-top:18px; }
+.bhc-list-pagination button { min-height:32px; padding:6px 10px; border:1px solid #d4e3ef; border-radius:5px; background:#fff; color:#176baf; font:inherit; font-size:12px; cursor:pointer; }
+.bhc-list-pagination button:disabled { opacity:.45; cursor:default; }
+.bhc-list-pagination nav, .bhc-list-pagination nav > span { display:inline-flex; align-items:center; gap:5px; }
+.bhc-list-pagination button[aria-current="page"] { background:#176baf; border-color:#176baf; color:#fff; }
+.bhc-list-details { min-height:0; overflow-y:auto; padding:24px; background:#f5faff; border-left:1px solid #dce9f3; }
+.bhc-list-details header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+.bhc-list-details h2 { margin:0; font-size:16px; font-weight:600; }
+.bhc-list-details header button { border:0; background:transparent; color:#718396; cursor:pointer; }
+.bhc-list-detail-identity { display:flex; gap:10px; align-items:center; padding:12px; background:#edf6fd; border:1px solid #dce9f3; border-radius:6px; margin-bottom:22px; }
+.bhc-list-details h3 { margin:0 0 8px; font-size:13px; font-weight:600; }
+.bhc-list-details p { margin:5px 0; color:#718396; font-size:12px; line-height:1.6; }
+.bhc-list-details dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 12px; margin:16px 0 24px; }
+.bhc-list-details dt { color:#8190a0; font-size:11px; margin-bottom:5px; }
+.bhc-list-details dd { margin:0; font-size:12px; overflow-wrap:anywhere; }
+.bhc-list-details > article { padding:12px 0; border-bottom:1px solid #e0eaf3; font-size:12px; }
+.bhc-patient-list-styled .bhc-patient-details-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(820px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 24px 24px;
+  border: 1px solid #c8dbe9;
+  border-radius: 10px;
+  background: #fff;
+  color: #374c60;
+  box-shadow: 0 22px 70px #17395c33;
+}
+.bhc-patient-details-dialog::backdrop { background: rgba(23,57,92,.38); }
+.bhc-patient-details-dialog > header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0 -24px 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #dce9f3;
+  background: #f5faff;
+}
+.bhc-patient-details-dialog > header button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #c8ddeb;
+  border-radius: 5px;
+  background: #fff;
+  color: #176baf;
+}
+.bhc-patient-details-dialog > header button:hover { background: #eaf4fc; }
+@media (max-width: 480px) {
+  .bhc-patient-details-dialog dl { grid-template-columns: 1fr; }
+}
+@media(max-width:1100px) { .bhc-patient-list-styled .bhc-patient-split, .bhc-patient-list-styled .bhc-patient-split.has-selected-patient { height:auto; min-height:calc(100dvh - 68px); grid-template-columns:minmax(0,1fr); } .bhc-patient-list-styled .bhc-patient-split .bhc-patient-table-wrap { flex:none; } .bhc-list-details { border-left:0; border-top:1px solid #dce9f3; } }
+@media(max-width:760px) { .medical-workspace > .bhc-main.bhc-patients-main { padding-top:52px; } .bhc-patient-list-styled .bhc-patient-split .bhc-patient-list-panel, .bhc-list-details { padding:18px 14px; } }
+.bhc-patient-list-styled { color:#374c60; font-size:13px; }
+.bhc-patient-list-styled .bhc-patient-page { display:grid; grid-template-columns:minmax(0,1fr); gap:0; margin-top:0; padding-top:0; }
+.bhc-patient-list-styled .bhc-filter-panel { display:flex; flex-wrap:wrap; align-items:flex-end; gap:14px; padding:18px; border:1px solid #dce6ef; border-radius:7px 7px 0 0; background:#fff; box-shadow:none; }
+.bhc-patient-list-styled .bhc-filter-panel h2 { flex-basis:100%; margin:0; color:#374c60; font-size:15px; font-weight:600; }
+.bhc-patient-list-styled .bhc-filter-panel > label { flex:1 1 260px; max-width:420px; margin:0; }
+.bhc-patient-list-styled .bhc-filter-panel label > span { font-size:11px; color:#718396; }
+.bhc-patient-list-styled .bhc-filter-panel label > div { display:flex; align-items:center; gap:8px; min-height:36px; padding:0 10px; background:#fafcfe; border:1px solid #d4e3ef; border-radius:6px; color:#718396; }
+.bhc-patient-list-styled .bhc-filter-panel input { width:100%; border:0; background:transparent; padding:8px 0; color:#40566b; font:inherit; font-size:12px; }
+.bhc-patient-list-styled .bhc-filter-panel label > div:focus-within { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.bhc-patient-list-styled .bhc-filter-panel input:focus { outline:none; box-shadow:none; }
+.bhc-patient-list-styled .bhc-filter-panel .add-patient-button { display:inline-flex; align-items:center; justify-content:center; gap:7px; width:auto; min-height:36px; margin:0 0 0 auto; padding:8px 14px; border:1px solid #176baf; border-radius:6px; background:#176baf; color:#fff; font:inherit; font-size:12px; font-weight:600; }
+.bhc-patient-list-styled .bhc-patient-list-panel { min-width:0; padding:20px 18px; border:1px solid #dce6ef; border-top:0; border-radius:0 0 7px 7px; background:#fff; }
+.bhc-patient-list-styled .bhc-patient-list-panel > h2 { font-size:15px; font-weight:600; color:#374c60; margin:0 0 16px; }
+.bhc-patient-list-styled .bhc-patient-table-wrap { border:1px solid #e0e7ee; border-radius:5px; overflow:auto; }
+.bhc-patient-list-styled .bhc-patient-table { width:100%; min-width:820px; border-collapse:collapse; }
+.bhc-patient-list-styled .bhc-patient-table th { text-align:left; padding:13px 12px; background:#f0f4f8; color:#405b71; font-size:11px; font-weight:600; }
+.bhc-patient-list-styled .bhc-patient-table td { padding:14px 12px; border-top:0; border-bottom:1px solid #e6ebf0; vertical-align:middle; font-size:12px; line-height:1.5; }
+.bhc-patient-list-styled .bhc-patient-table td strong { color:#374c60; font-size:12px; font-weight:600; }
+.bhc-patient-list-styled .bhc-patient-table td > span { font-size:11px; color:#7b8896; margin-top:3px; }
+.bhc-patient-list-styled .bhc-patient-table tbody tr:hover { background:#f5faff; }
+.bhc-patient-list-styled .bhc-patient-table tbody tr:last-child td { border-bottom:0; }
+.bhc-patient-identity { display:flex; align-items:center; gap:10px; margin-bottom:4px; }
+.bhc-patient-list-styled .bhc-patient-initials { display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; flex-shrink:0; border-radius:50%; background:#d9eaf7; color:#255e8e; font-size:11px; font-weight:600; margin:0; }
+.bhc-patient-list-styled .patient-row-actions { display:flex; align-items:center; flex-wrap:nowrap; gap:5px; }
+.bhc-patient-list-styled .bhc-patient-table th:last-child,
+.bhc-patient-list-styled .bhc-patient-table td:last-child { width:245px; text-align:left; white-space:nowrap; padding-left:10px; padding-right:10px; }
+.bhc-list-search-toolbar { display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+.bhc-list-search-toolbar .bhc-list-search { margin-bottom:0; }
+.bhc-list-filter-button { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:36px; padding:8px 12px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; cursor:pointer; white-space:nowrap; }
+.bhc-list-filters { display:flex; flex-wrap:wrap; align-items:flex-end; gap:12px; margin-bottom:18px; padding:12px; background:#f5faff; border:1px solid #dce9f3; border-radius:6px; }
+.bhc-list-filters label { display:grid; gap:6px; flex:1 1 150px; color:#647e94; font-size:12px; }
+.bhc-list-filters select { min-height:36px; padding:8px; border:1px solid #d4e3ef; border-radius:6px; background:#fff; color:#40566b; }
+.bhc-patient-list-styled .patient-row-actions button { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:32px; padding:7px 10px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:11px; font-weight:600; cursor:pointer; }
+.bhc-patient-list-styled .patient-row-actions button:hover { background:#dceefb; }
+.bhc-patient-list-styled .patient-row-actions button svg { width:13px; height:13px; }
+.bhc-patient-list-styled button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+.bhc-patient-list-styled .patient-alert { border:1px solid #bfdcf0; border-radius:6px; background:#eff7fd; color:#235a84; font-size:12px; }
+@media(max-width:600px) { .bhc-patient-list-styled .bhc-filter-panel > label { max-width:none; flex-basis:100%; } .bhc-patient-list-styled .bhc-filter-panel .add-patient-button { margin-left:0; } .bhc-patient-list-styled .bhc-patient-list-panel { padding:16px 12px; } }
+.bhc-patient-list-styled .patient-row-actions .refer-patient-button { background:#eaf4fc; border-color:#bfdcf0; color:#176baf; }
+.bhc-patient-list-styled .patient-row-actions .distribute-patient-button { background:#eaf7ef; border-color:#b8dfc7; color:#237548; }
+.bhc-patient-list-styled .patient-row-actions .edit-patient-button { background:#fff5df; border-color:#eddaa8; color:#93610c; }
+.bhc-patient-list-styled .patient-row-actions .refer-patient-button:hover { background:#dceefb; }
+.bhc-patient-list-styled .patient-row-actions .distribute-patient-button:hover { background:#d8efdf; }
+.bhc-patient-list-styled .patient-row-actions .edit-patient-button:hover { background:#ffedc2; }
+.bhc-patient-list-styled .bhc-add-patient-modal { width:min(760px,100%); max-height:calc(100dvh - 40px); border:1px solid #dce9f3; border-radius:14px; box-shadow:0 24px 70px #17395c30; }
+.bhc-add-patient-modal > header { padding:20px 24px; background:#f5faff; align-items:flex-start; }
+.bhc-form-eyebrow { display:block; color:#176baf; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; }
+.bhc-add-patient-modal header h2 { font-size:21px; color:#23445f; font-weight:650; }
+.bhc-add-patient-modal header p { margin:7px 0 0; color:#697b8c; font-size:12px; line-height:1.5; }
+.bhc-add-patient-modal header button { flex-shrink:0; border:0; border-radius:8px; background:#eaf4fc; color:#176baf; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); padding:24px; gap:18px 20px; }
+.bhc-add-patient-modal .bhc-form-section-title { grid-column:1 / -1; margin:4px 0 0; padding-bottom:10px; border-bottom:1px solid #e3edf5; color:#176baf; font-size:13px; font-weight:650; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form > label { display:flex; flex-direction:column; align-items:stretch; gap:8px; border:0; padding:0; min-height:0; }
+.bhc-add-patient-modal .patient-form label > span { color:#405b71; font-size:12px; font-weight:600; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form input:not([type="radio"]), .bhc-patient-list-styled .bhc-add-patient-modal .patient-form select { min-width:0; height:42px; padding:0 10px; border:1px solid #d4e3ef; border-radius:7px; font:inherit; font-size:13px; color:#34495e; background:white; }
+.bhc-add-patient-modal .birth-date-fields { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,1fr); gap:6px; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form fieldset { padding:0; min-height:0; border:0; display:flex; gap:18px; align-items:center; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form legend { width:auto; text-align:left; color:#405b71; font-size:12px; margin-bottom:10px; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form fieldset label { display:inline-flex; align-items:center; gap:8px; border:0; padding:0; min-height:28px; }
+.bhc-add-patient-modal input[type="radio"] { accent-color:#176baf; }
+.bhc-add-patient-modal .patient-form input:focus, .bhc-add-patient-modal .patient-form select:focus { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form-actions { grid-column:1 / -1; display:flex; justify-content:flex-end; gap:12px; margin-top:4px; padding:18px 0 0; border-top:1px solid #e3edf5; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form-actions button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:40px; padding:0 18px; border:1px solid #c8ddeb; border-radius:7px; background:white; color:#607589; font:inherit; font-size:13px; font-weight:600; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form-actions button[type="submit"] { background:#176baf; border-color:#176baf; color:#fff; }
+@media(max-width:600px) { .bhc-patient-list-styled .bhc-add-patient-modal .patient-form { grid-template-columns:minmax(0,1fr); padding:18px; } .bhc-add-patient-modal > header { padding:18px; } .bhc-add-patient-modal .patient-form-actions button { flex:1; } }
+.bhc-walk-in-dialog { width:min(480px,calc(100vw - 32px)); padding:24px; border:1px solid #d5e5f0; border-radius:10px; color:#34516b; background:#fff; box-shadow:0 20px 60px #183a5b30; }
+.bhc-walk-in-dialog::backdrop { background:#183a5b66; }
+.bhc-walk-in-dialog header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.bhc-walk-in-dialog h2 { display:flex; align-items:center; gap:9px; margin:0; color:#176baf; font-size:17px; }
+.bhc-walk-in-dialog header button { display:grid; place-items:center; border:0; padding:5px; background:transparent; color:#718396; cursor:pointer; }
+.bhc-walk-in-dialog p { margin:20px 0 24px; font-size:13px; line-height:1.8; }
+.bhc-walk-in-dialog footer { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+.bhc-walk-in-dialog footer button { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:38px; border:1px solid #ccddeb; border-radius:5px; padding:8px 12px; background:#f4f8fb; color:#526c82; cursor:pointer; font-size:12px; }
+.bhc-walk-in-dialog footer .bhc-walk-in-go { color:#fff; background:#176baf; border-color:#176baf; }
+.bhc-walk-in-dialog button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+
+/* Wide registration popup on desktop; portrait form on small screens. */
+.bhc-shell .bhc-main .bhc-patient-list-styled .patient-modal.bhc-add-patient-modal {
+  width:min(1140px,calc(100vw - 48px));
+  max-height:calc(100dvh - 48px);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.bhc-patient-list-styled .bhc-add-patient-modal > header { flex-shrink:0; padding:18px 24px; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px 20px; min-height:0; overflow-y:auto; padding:20px 24px 0; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form > .patient-dependent-fields { display:block; padding:16px; border:1px solid #d6e5f0; border-radius:6px; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-dependent-fields label { display:flex; flex-direction:column; align-items:stretch; gap:7px; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form-actions { position:sticky; bottom:0; z-index:1; background:#fff; padding:16px 0; margin:0; }
+@media(max-width:1000px) {
+  .bhc-patient-list-styled .bhc-add-patient-modal .patient-form { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  .bhc-shell .bhc-main .bhc-patient-list-styled .patient-modal.bhc-add-patient-modal { width:calc(100vw - 24px); max-height:calc(100dvh - 24px); }
+  .bhc-patient-list-styled .bhc-add-patient-modal > header { padding:16px; }
+  .bhc-patient-list-styled .bhc-add-patient-modal .patient-form { grid-template-columns:minmax(0,1fr); padding:16px 16px 0; gap:16px; }
+  .bhc-patient-list-styled .bhc-add-patient-modal .patient-form-actions { padding:14px 0; }
+}
+.bhc-add-patient-modal .bhc-registration-progress { grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:16px 28px; list-style:none; margin:0; padding:0 0 16px; border-bottom:1px solid #e3edf5; }
+.bhc-registration-progress li { display:flex; align-items:center; gap:9px; font-size:12px; color:#8190a0; }
+.bhc-registration-progress li > span { display:grid; place-items:center; width:26px; height:26px; border-radius:50%; background:#edf2f7; }
+.bhc-registration-progress li[aria-current="step"] { color:#176baf; font-weight:600; }
+.bhc-registration-progress li[aria-current="step"] > span { background:#176baf; color:#fff; }
+.bhc-patient-list-styled .bhc-add-patient-modal .bhc-registration-step { grid-column:1 / -1; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px 20px; min-width:0; }
+.bhc-add-patient-modal .bhc-registration-step[hidden] { display:none !important; }
+.bhc-add-patient-modal .bhc-registration-step > label { display:flex; flex-direction:column; gap:8px; min-width:0; }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form-actions .bhc-registration-next { background:#176baf; border-color:#176baf; color:#fff; }
+@media(max-width:1000px) { .bhc-patient-list-styled .bhc-add-patient-modal .bhc-registration-step { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .bhc-patient-list-styled .bhc-add-patient-modal .bhc-registration-step { grid-template-columns:minmax(0,1fr); } }
+.bhc-patient-list-styled .bhc-add-patient-modal .patient-form .bhc-registration-step > .patient-dependent-fields { display:block; padding:16px; border:1px solid #d6e5f0; border-radius:6px; }
+
+/* Landscape edit form, scoped to the BHC patient workflow. */
+.bhc-patient-list-styled .bhc-edit-patient-modal {
+  width: min(1140px, 100%);
+  max-height: calc(100dvh - 48px);
+  border-radius: 10px;
+  border: 1px solid #c8dbe9;
+}
+.bhc-patient-list-styled .bhc-edit-patient-modal > header {
+  padding: 20px 24px;
+  min-height: 76px;
+  background: #f5faff;
+}
+.bhc-patient-list-styled .bhc-edit-patient-modal .patient-account-details {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 20px 24px 0;
+}
+.bhc-edit-patient-modal .patient-account-details > div { min-width: 0; padding: 14px; }
+.bhc-edit-patient-modal .patient-account-details strong { overflow-wrap: anywhere; line-height: 1.5; }
+.bhc-patient-list-styled .bhc-edit-patient-modal .patient-edit-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 24px;
+  padding: 24px;
+}
+.bhc-edit-patient-modal .patient-edit-form label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+.bhc-edit-patient-modal .patient-edit-form label > span {
+  align-self: flex-start;
+  font-size: 12px;
+  color: #405b71;
+}
+.bhc-edit-patient-modal .patient-edit-form input:not([type='radio']):not([type='hidden']),
+.bhc-edit-patient-modal .patient-edit-form select {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 9px 10px;
+  border: 1px solid #cddfeb;
+  border-radius: 5px;
+  background: #fff;
+  color: #34495e;
+  font: inherit;
+  box-sizing: border-box;
+}
+.bhc-edit-patient-modal .patient-edit-form fieldset {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.bhc-edit-patient-modal .patient-edit-form legend {
+  width: auto;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.bhc-edit-patient-modal .patient-edit-form > fieldset:not(.patient-dependent-fields) {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bhc-edit-patient-modal .patient-edit-form fieldset label:has(input[type='radio']) {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.bhc-edit-patient-modal .patient-edit-form input[type='radio'] { width: 14px; height: 14px; margin: 0; accent-color: #176baf; }
+.bhc-edit-patient-modal .patient-edit-form .patient-dependent-fields {
+  grid-column: 1 / -1;
+  display: block;
+  padding: 20px;
+  border: 1px solid #d6e5f0;
+  border-radius: 6px;
+}
+.bhc-edit-patient-modal .patient-edit-form .patient-dependent-fields > div { gap: 20px; }
+.bhc-edit-patient-modal .patient-edit-form .patient-dependent-fields > legend { padding: 0 8px; color: #176baf; }
+.bhc-edit-patient-modal .patient-edit-form .patient-form-actions { grid-column: 1 / -1; margin: 0; padding: 16px 0 0; border-top: 1px solid #dce9f3; }
+.bhc-patient-list-styled .bhc-edit-patient-modal .patient-form-actions button[type='button'] { background: #edf6fd; color: #176baf; border: 1px solid #b8d5eb; }
+.bhc-patient-list-styled .bhc-edit-patient-modal .patient-form-actions button[type='submit'] { background: #176baf; color: #fff; border: 1px solid #176baf; }
+@media (max-width: 900px) {
+  .bhc-patient-list-styled .bhc-edit-patient-modal .patient-edit-form,
+  .bhc-patient-list-styled .bhc-edit-patient-modal .patient-account-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .bhc-patient-list-styled .bhc-edit-patient-modal > header { padding: 18px; }
+  .bhc-patient-list-styled .bhc-edit-patient-modal .patient-account-details { grid-template-columns: 1fr; padding: 18px 18px 0; }
+  .bhc-patient-list-styled .bhc-edit-patient-modal .patient-edit-form { grid-template-columns: 1fr; padding: 18px; }
+}

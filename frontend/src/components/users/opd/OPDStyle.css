@@ -1,0 +1,9 @@
+@import '../shared/DepartmentDashboard.css';
+@import '../shared/RoleDashboard.css';
+.medical-workspace.opd-shell > .cho-main.opd-patients-main { padding:0; background:#f3f8fc; }
+.opd-patients-main > .opd-patient-workspace { padding-top:0; min-height:0; background:#f3f8fc; }
+.opd-patient-workspace .cho-patient-split { margin:0; }
+.opd-shell .opd-patients-main .opd-patient-workspace .cho-patient-list-panel,
+.opd-shell .opd-patients-main .opd-patient-workspace .cho-patient-split { background:#f3f8fc; }
+.opd-shell .opd-patients-main .bhc-patient-table-wrap { background:#fff; }
+@media(max-width:760px) { .medical-workspace.opd-shell > .cho-main.opd-patients-main { padding-top:52px; } }

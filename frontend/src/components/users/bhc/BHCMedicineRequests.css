@@ -1,0 +1,46 @@
+.bhc-shell .bhc-main .bhc-referral-page.bhc-medicine-request-page.bhc-requests-organized {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+.bhc-shell .bhc-main .bhc-requests-organized.bhc-medicine-request-page > .bhc-filter-panel {
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) minmax(180px, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+  width: auto;
+}
+.bhc-shell .bhc-main .bhc-requests-organized.bhc-medicine-request-page > .bhc-filter-panel > h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.bhc-shell .bhc-main .bhc-requests-organized.bhc-medicine-request-page > .bhc-filter-panel > label,
+.bhc-shell .bhc-main .bhc-requests-organized.bhc-medicine-request-page > .bhc-filter-panel > button { margin: 0; }
+/* Clickable status summaries match the distribution dashboard cards. */
+.bhc-request-status-filters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.bhc-request-status-filters button { display: flex; align-items: center; gap: 12px; min-width: 0; min-height: 80px; padding: 18px; border: 1px solid #dce6ef; border-radius: 6px; background: #fff; color: #607589; font: inherit; font-size: 12px; text-align: left; cursor: pointer; }
+.bhc-request-status-filters button:hover { border-color: #8ebce0; background: #fafcff; }
+.bhc-request-status-filters button[aria-pressed='true'] { border-color: #176baf; box-shadow: inset 0 -3px #176baf; }
+.bhc-request-status-filters .bhc-request-stat-icon { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border-radius: 4px; background: #edf6ff; color: #3284ed; }
+.bhc-request-stat-label { flex: 1; line-height: 1.5; }
+.bhc-request-status-filters strong { margin-left: auto; color: #234e70; font-size: 24px; font-weight: 650; }
+.bhc-request-status-filters button[data-status='requested'] .bhc-request-stat-icon { background: #fff7e4; color: #ac7913; }
+.bhc-request-status-filters button[data-status='approved'] .bhc-request-stat-icon,
+.bhc-request-status-filters button[data-status='released'] .bhc-request-stat-icon { background: #e9f8ef; color: #20b75b; }
+.bhc-request-status-filters button[data-status='dispatched'] .bhc-request-stat-icon { background: #eef0ff; color: #6559ce; }
+.bhc-request-status-filters button[data-status='declined'] .bhc-request-stat-icon { background: #fff0f0; color: #e94d60; }
+.bhc-request-status-filters button:focus-visible { outline: 2px solid #176baf; outline-offset: 3px; }
+@media (max-width: 1250px) { .bhc-request-status-filters { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .bhc-request-status-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .bhc-request-status-filters { grid-template-columns: minmax(0, 1fr); } }
+.bhc-request-result-count { margin: 0; color: #607589; font-size: 12px; }
+.bhc-requests-organized .medicine-request-card > header > strong { padding: 6px 10px; border-radius: 5px; font-size: 12px; }
+.bhc-requests-organized .medicine-request-card[data-status='requested'] > header > strong { background: #fff4d9; color: #805b09; }
+.bhc-requests-organized .medicine-request-card[data-status='approved'] > header > strong,
+.bhc-requests-organized .medicine-request-card[data-status='released'] > header > strong { background: #e6f5eb; color: #237548; }
+.bhc-requests-organized .medicine-request-card[data-status='dispatched'] > header > strong { background: #eaf2fd; color: #176baf; }
+.bhc-requests-organized .medicine-request-card[data-status='declined'] > header > strong { background: #fff0f0; color: #a83333; }
+.bhc-request-closed { margin: 16px 18px; padding: 14px; background: #fff0f0; color: #a83333; border-radius: 6px; font-size: 13px; }
+@media (max-width: 700px) {
+  .bhc-shell .bhc-main .bhc-requests-organized.bhc-medicine-request-page > .bhc-filter-panel { grid-template-columns: minmax(0, 1fr); }
+}

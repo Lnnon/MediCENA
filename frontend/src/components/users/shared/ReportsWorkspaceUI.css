@@ -1,0 +1,51 @@
+/* Shared report styling; report contents, role scope, exports and layouts remain. */
+.reports-workspace-ui { color:#374c60; font-size:13px; }
+.reports-workspace-ui .cho-page-heading h1 { color:#303f50; font-size:23px; font-weight:650; margin:5px 0; }
+.reports-workspace-ui .cho-page-heading p { color:#718396; font-size:12px; line-height:1.6; }
+.reports-workspace-ui .reports-picker-card { border:1px solid #dce6ef; border-radius:8px; background:#fff; box-shadow:none; color:#176baf; font-family:inherit; text-align:left; }
+.reports-workspace-ui .reports-picker-card:hover { background:#f5faff; border-color:#81b5da; box-shadow:0 3px 12px #17395c09; }
+.reports-workspace-ui .reports-picker-card > svg { color:#176baf; background:#eaf4fc; padding:9px; box-sizing:content-box; border-radius:8px; }
+.reports-workspace-ui .reports-picker-card > strong { color:#374c60; font-size:15px; font-weight:600; }
+.reports-workspace-ui .reports-picker-card > span { color:#718396; font-size:12px; line-height:1.6; }
+.reports-workspace-ui .reports-main { min-width:0; background:#fff; border:1px solid #dce6ef; border-radius:8px; box-shadow:none; }
+.reports-workspace-ui .reports-main > header { border-bottom:1px solid #dce9f3; background:#f5faff; border-radius:8px 8px 0 0; }
+.reports-workspace-ui .reports-main > header span { color:#718396; font-size:10px; letter-spacing:.04em; }
+.reports-workspace-ui .reports-main > header h2 { color:#234e70; font-size:19px; font-weight:600; }
+.reports-workspace-ui :is(.reports-actions button,.reports-back-button) { display:inline-flex; align-items:center; justify-content:center; gap:7px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font-family:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.reports-workspace-ui .reports-actions button:last-child { background:#176baf; border-color:#176baf; color:#fff; }
+.reports-workspace-ui .reports-summary-grid > article { border:1px solid #dce6ef; border-radius:6px; background:#fff; box-shadow:none; }
+.reports-workspace-ui .reports-summary-grid svg { color:#176baf; }
+.reports-workspace-ui .reports-summary-grid span { color:#718396; font-size:11px; }
+.reports-workspace-ui .reports-summary-grid strong { color:#234e70; font-size:24px; font-weight:650; }
+.reports-workspace-ui :is(.reports-detail-grid > section,.reports-flow-card,.reports-table-card,.reports-outbreak-card) { background:#fff; border:1px solid #dce6ef; border-radius:6px; box-shadow:none; }
+.reports-workspace-ui h3 { color:#374c60; font-size:14px; font-weight:600; }
+.reports-workspace-ui .report-row { border-bottom-color:#e6ebf0; color:#40566b; font-size:12px; }
+.reports-workspace-ui .report-row strong { color:#234e70; font-size:12px; font-weight:600; }
+.reports-workspace-ui .reports-flow-steps > div { background:#f5faff; border-color:#dce9f3; border-radius:6px; }
+.reports-workspace-ui .reports-outbreak-card p { color:#718396; font-size:12px; line-height:1.6; }
+.reports-workspace-ui .reports-outbreak-metrics span { color:#718396; font-size:11px; }
+.reports-workspace-ui .reports-outbreak-metrics strong { color:#234e70; font-size:17px; }
+.reports-workspace-ui .patient-alert { background:#eff7fd; border:1px solid #bfdcf0; border-radius:6px; color:#235a84; font-size:12px; }
+.reports-workspace-ui button:focus-visible { outline:2px solid #4296d2; outline-offset:3px; }
+@media print { .reports-workspace-ui .reports-actions, .reports-workspace-ui .reports-back-button { display:none; } .reports-workspace-ui .reports-main { box-shadow:none; } }
+
+.referral-export-dialog {
+  box-sizing: border-box;
+  width: min(460px, calc(100% - 32px));
+  max-height: 85vh;
+  margin: auto;
+  padding: 24px;
+  border: 1px solid #cbddeb;
+  border-radius: 10px;
+  color: #264863;
+  background: white;
+}
+.referral-export-dialog::backdrop { background: rgb(30 58 82 / 40%); }
+.referral-export-dialog h2 { margin: 0 0 16px; font-size: 20px; }
+.referral-export-dialog fieldset { margin: 0; padding: 0; border: 0; }
+.referral-export-dialog legend { margin-bottom: 10px; }
+.referral-export-dialog label { display: flex; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid #dfebf4; cursor: pointer; }
+.referral-export-dialog input[type=checkbox] { width: 18px; height: 18px; }
+.referral-export-dialog small { margin-left: auto; }
+.referral-export-dialog .reports-actions { justify-content: flex-end; margin-top: 18px; }
+.referral-export-dialog button:disabled { opacity: .55; }

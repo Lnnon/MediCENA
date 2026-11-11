@@ -1,0 +1,61 @@
+/* Keep collapsed menus out of layout, including desktop hover overrides. */
+:is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-dropdown,.patient-dropdown,.bhc-dropdown,.doc-dropdown)[hidden] { display:none !important; }
+:is(.cho-workspace,.patient-workspace,.medical-workspace) [aria-expanded="true"] > .nav-chevron { transform:rotate(180deg); }
+:is(.cho-workspace,.patient-workspace,.medical-workspace) .nav-chevron { transition:transform 150ms ease; }
+
+/* Hide the indicator without disabling wheel, touch, or keyboard scrolling.
+   No scrollbar gutter is reserved, so opening submenus never shifts the text. */
+:is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-navbar,.patient-navbar,.bhc-navbar,.doc-navbar,.cho-nav-list,.patient-nav-list,.bhc-nav-list,.doc-nav-list) {
+  direction:ltr;
+  scrollbar-width:none;
+  scrollbar-gutter:auto;
+}
+/* Only the fixed sidebar scrolls on desktop. A nested overflow container
+   intercepts wheel gestures before they reach that sidebar. */
+@media(min-width:769px) {
+  :is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-navbar,.patient-navbar,.bhc-navbar,.doc-navbar) {
+    height:calc(100dvh - 68px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior-y:contain;
+    touch-action:pan-y;
+  }
+  :is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-nav-list,.patient-nav-list,.bhc-nav-list,.doc-nav-list) {
+    height:auto;
+    max-height:none;
+    overflow:visible;
+    overscroll-behavior:auto;
+  }
+  :is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-nav-list,.patient-nav-list,.bhc-nav-list,.doc-nav-list) > li { flex-shrink:0; }
+}
+@media(max-width:768px) {
+  :is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-nav-list,.patient-nav-list,.bhc-nav-list,.doc-nav-list).is-open {
+    max-height:calc(100dvh - 68px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior-y:contain;
+    touch-action:pan-y;
+  }
+}
+:is(.cho-workspace,.patient-workspace,.medical-workspace) :is(.cho-navbar,.patient-navbar,.bhc-navbar,.doc-navbar,.cho-nav-list,.patient-nav-list,.bhc-nav-list,.doc-nav-list)::-webkit-scrollbar {
+  display:none;
+  width:0;
+  height:0;
+}
+
+/* Use the same type and icon scale for role navigation and its submenus. */
+:is(.medical-workspace, .cho-workspace, .patient-workspace)
+:is(.bhc-navbar, .doc-navbar, .cho-navbar, .patient-navbar)
+:is(.bhc-nav-list, .doc-nav-list, .cho-nav-list, .patient-nav-list) li:not(.mobile-sidebar-header) > :is(a, button) {
+  font: 600 12px/1.4 Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  min-height: 44px;
+  gap: 10px;
+  white-space: normal;
+}
+:is(.medical-workspace, .cho-workspace, .patient-workspace)
+:is(.bhc-nav-list, .doc-nav-list, .cho-nav-list, .patient-nav-list) li > :is(a, button) > svg:not(.nav-chevron) {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}

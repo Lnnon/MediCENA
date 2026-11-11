@@ -1,0 +1,9 @@
+.medicine-combobox { position:relative; width:100%; }
+.medicine-combobox input { width:100%; padding-right:38px !important; }
+.medicine-combobox .medicine-combobox-clear { position:absolute; right:5px; top:5px; bottom:5px; width:28px; min-height:0; padding:0; margin:0; background:transparent; color:#62778a; border:0; border-radius:4px; cursor:pointer; }
+.medicine-combobox-options { z-index:10000; max-height:192px; overflow-y:auto; overscroll-behavior:contain; border:1px solid #bfd6e8; border-radius:6px; background:#fff; color:#34516b; box-shadow:0 8px 24px #183a5b20; font:12px Arial, sans-serif; }
+.medicine-combobox-options [role="option"] { height:48px; padding:7px 12px; cursor:pointer; display:flex; flex-direction:column; justify-content:center; gap:3px; }
+.medicine-combobox-options [role="option"] > span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.medicine-combobox-options small { font-size:10px; color:#718396; }
+.medicine-combobox-options [role="option"]:hover,.medicine-combobox-options [aria-selected="true"] { background:#eaf4fc; color:#176baf; }
+.medicine-combobox-options p { margin:0; padding:14px; }

@@ -1,0 +1,842 @@
+[
+  {
+    "category": "Anti-infectious",
+    "name": "Albendazole",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "400 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Amoxicillin",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "500 mg",
+        "verified": false
+      },
+      {
+        "form": "Oral Suspension",
+        "strength": "250 mg/5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Azithromycin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Cefixime",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "200 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Cefuroxime",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Ciprofloxacin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Clarithromycin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Clindamycin",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "300 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Clotrimazole",
+    "reference_presentations": [
+      {
+        "form": "Cream",
+        "strength": "1%",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Cloxacillin",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Co-amoxiclav",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg + 125 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Co-trimoxazole (Sulfamethoxazole + Trimethoprim)",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "800 mg + 160 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Doxycycline",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "100 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Erythromycin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Fluconazole",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "150 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Ketoconazole",
+    "reference_presentations": [
+      {
+        "form": "Cream",
+        "strength": "2%",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Mebendazole",
+    "reference_presentations": [
+      {
+        "form": "Chewable Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Metronidazole",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Nitrofurantoin",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "100 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Oseltamivir",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "75 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-infectious",
+    "name": "Tobramycin",
+    "reference_presentations": [
+      {
+        "form": "Eye Drops",
+        "strength": "0.3%",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-thrombotics",
+    "name": "Aspirin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "80 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-thrombotics",
+    "name": "Clopidogrel",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "75 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Budesonide + Formoterol",
+    "reference_presentations": [
+      {
+        "form": "Inhaler",
+        "strength": "160 mcg + 4.5 mcg/dose",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Fluticasone + Salmeterol",
+    "reference_presentations": [
+      {
+        "form": "Dry Powder Inhaler",
+        "strength": "250 mcg + 50 mcg/dose",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Ipratropium",
+    "reference_presentations": [
+      {
+        "form": "Inhaler",
+        "strength": "20 mcg/dose",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Ipratropium + Salbutamol",
+    "reference_presentations": [
+      {
+        "form": "Nebulizer Solution",
+        "strength": "0.5 mg + 2.5 mg/2.5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Montelukast",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Prednisone",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "20 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Salbutamol",
+    "reference_presentations": [
+      {
+        "form": "Inhaler",
+        "strength": "100 mcg/dose",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-asthma and COPD",
+    "name": "Tiotropium",
+    "reference_presentations": [
+      {
+        "form": "Inhalation Capsule",
+        "strength": "18 mcg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Aluminum Hydroxide + Magnesium Hydroxide",
+    "reference_presentations": [
+      {
+        "form": "Oral Suspension",
+        "strength": "200 mg + 200 mg/5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Butamirate",
+    "reference_presentations": [
+      {
+        "form": "Syrup",
+        "strength": "7.5 mg/5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Celecoxib",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "200 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Cetirizine",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg",
+        "verified": false
+      },
+      {
+        "form": "Oral Solution",
+        "strength": "5 mg/5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Chlorphenamine",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "4 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Colchicine",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mcg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Diphenhydramine",
+    "reference_presentations": [
+      {
+        "form": "Syrup",
+        "strength": "12.5 mg/5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Ferrous Salt (Iron Preparations)",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "325 mg ferrous sulfate",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Folic Acid + Iron Ferrous",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "To be verified",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Ibuprofen",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "200 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Lagundi (Vitex Negundo)",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "300 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Loratadine",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Mefenamic Acid",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Naproxen",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Omeprazole",
+    "reference_presentations": [
+      {
+        "form": "Delayed-release Capsule",
+        "strength": "20 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Oral Rehydration Salts",
+    "reference_presentations": [
+      {
+        "form": "Powder Sachet",
+        "strength": "WHO low-osmolarity formulation",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Paracetamol",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      },
+      {
+        "form": "Syrup",
+        "strength": "120 mg/5 mL",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Supportive/Other Therapy",
+    "name": "Zinc",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "20 mg elemental zinc",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-diabetics",
+    "name": "Dapagliflozin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-diabetics",
+    "name": "Gliclazide",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "80 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-diabetics",
+    "name": "Metformin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "500 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-dyslipidemia",
+    "name": "Atorvastatin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "20 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-dyslipidemia",
+    "name": "Fenofibrate",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "160 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-dyslipidemia",
+    "name": "Rosuvastatin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-dyslipidemia",
+    "name": "Simvastatin",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "20 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Amlodipine",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "5 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Atenolol",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "50 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Captopril",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "25 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Clonidine",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "150 mcg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Diltiazem",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "30 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Enalapril",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Enalapril + Hydrochlorothiazide",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "10 mg + 25 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Hydrochlorothiazide",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "25 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Isosorbide Dinitrate",
+    "reference_presentations": [
+      {
+        "form": "Sublingual Tablet",
+        "strength": "5 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Isosorbide Mononitrate",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "20 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Losartan",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "50 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Methyldopa",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "250 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Metoprolol",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "50 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Tamsulosin",
+    "reference_presentations": [
+      {
+        "form": "Modified-release Capsule",
+        "strength": "0.4 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Telmisartan",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "40 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Telmisartan + Hydrochlorothiazide",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "40 mg + 12.5 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Valsartan",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "80 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Anti-hypertensive and Cardiology",
+    "name": "Valsartan + Hydrochlorothiazide",
+    "reference_presentations": [
+      {
+        "form": "Tablet",
+        "strength": "80 mg + 12.5 mg",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "category": "Nervous System",
+    "name": "Gabapentin",
+    "reference_presentations": [
+      {
+        "form": "Capsule",
+        "strength": "300 mg",
+        "verified": false
+      }
+    ]
+  }
+]

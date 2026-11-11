@@ -1,0 +1,36 @@
+/* CHO-only profile styling; shared profile behavior remains unchanged. */
+.cho-profile-styled { color:#374151; font-size:13px; }
+.cho-profile-styled .cho-page-heading { align-items:center; }
+.cho-profile-styled .cho-page-heading h1 { margin:5px 0; font-size:23px; font-weight:650; color:#303f50; }
+.cho-profile-styled .cho-page-heading span { font-size:10px; letter-spacing:.06em; color:#176baf; }
+.cho-profile-styled .cho-page-heading p { color:#718396; font-size:12px; line-height:1.6; }
+.cho-profile-styled .profile-page { gap:18px; }
+.cho-profile-styled .profile-card { min-width:0; padding:22px; border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; }
+.cho-profile-styled .profile-identity-card { background:#f5faff; }
+.cho-profile-styled .profile-photo-wrap { border-color:#d4e7f6; }
+.cho-profile-styled .profile-photo-wrap label { display:grid; place-items:center; background:#176baf; color:#fff; border:2px solid #fff; border-radius:50%; cursor:pointer; }
+.cho-profile-styled .profile-identity-card h2 { color:#374c60; font-size:19px; font-weight:600; overflow-wrap:anywhere; }
+.cho-profile-styled .profile-identity-card p { color:#718396; font-size:12px; line-height:1.6; }
+.cho-profile-styled .profile-identity-card > strong { display:inline-block; padding:5px 12px; border-radius:5px; background:#eaf4fc; color:#176baf; font-size:11px; font-weight:600; }
+.cho-profile-styled .profile-detail-card > header { padding-bottom:18px; margin-bottom:18px; border-bottom:1px solid #e5edf4; color:#176baf; }
+.cho-profile-styled .profile-detail-card header span { color:#8190a0; font-size:10px; }
+.cho-profile-styled .profile-detail-card header h2 { margin:4px 0 0; font-size:16px; font-weight:600; color:#374c60; }
+.cho-profile-styled .profile-detail-grid { gap:14px; }
+.cho-profile-styled .profile-detail-grid > div { padding:15px; border:1px solid #e0eaf3; border-radius:6px; background:#f7fbff; }
+.cho-profile-styled .profile-detail-grid svg { color:#176baf; }
+.cho-profile-styled .profile-detail-grid span { font-size:11px; color:#718396; }
+.cho-profile-styled .profile-detail-grid strong { color:#40566b; font-size:13px; font-weight:500; line-height:1.6; overflow-wrap:anywhere; }
+.cho-profile-styled .profile-edit-form { gap:18px; }
+.cho-profile-styled .profile-edit-form label { gap:8px; font-size:12px; }
+.cho-profile-styled .profile-edit-form label > span { color:#405b71; font-weight:600; }
+.cho-profile-styled .profile-edit-form input { width:100%; min-height:42px; padding:10px 12px; border:1px solid #d4e3ef; border-radius:6px; background:#fff; color:#34495e; font:inherit; font-size:13px; }
+.cho-profile-styled .profile-edit-form input:disabled, .cho-profile-styled .profile-edit-form input[readonly] { background:#f3f7fa; color:#8190a0; }
+.cho-profile-styled .profile-edit-form input:focus { outline:2px solid #bfdcf0; border-color:#4296d2; }
+.cho-profile-styled .profile-edit-form small { color:#8190a0; font-size:11px; }
+.cho-profile-styled .reports-actions button, .cho-profile-styled .medicine-form-actions button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:38px; padding:9px 16px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.cho-profile-styled .medicine-form-actions button[type="submit"] { border-color:#176baf; background:#176baf; color:#fff; }
+.cho-profile-styled .medicine-form-actions button[type="submit"]:hover { background:#12578f; }
+.cho-profile-styled button:disabled { opacity:.6; cursor:not-allowed; }
+.cho-profile-styled button:focus-visible, .cho-profile-styled .profile-photo-wrap label:focus-within { outline:2px solid #4296d2; outline-offset:3px; }
+.cho-profile-styled .patient-alert { padding:12px; border:1px solid #bfdcf0; border-radius:6px; background:#eff7fd; color:#235a84; font-size:12px; }
+@media(max-width:760px) { .cho-profile-styled .cho-page-heading { align-items:flex-start; flex-wrap:wrap; } .cho-profile-styled .profile-card { padding:18px; } }

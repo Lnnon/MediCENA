@@ -1,0 +1,36 @@
+/* Medical-sheet appearance for OPD dialogs; values and submission stay unchanged. */
+.opd-shell .cho-main .patient-modal { width:min(900px,100%); max-height:calc(100dvh - 36px); border:1px solid #c8dbe9; border-radius:10px; background:#fff; }
+.opd-shell .cho-main .patient-modal > header { padding:20px 24px; background:#f5faff; border-bottom:2px solid #176baf; align-items:flex-start; }
+.opd-shell .cho-main .patient-modal > header h2 { margin:0; color:#234e70; font-size:21px; font-weight:650; }
+.opd-shell .cho-main .patient-modal > header::before { content:none; }
+.opd-shell .cho-main .patient-modal > header > div::before { content:'OUTPATIENT DEPARTMENT · LUCENA CITY'; display:block; color:#176baf; font-size:10px; letter-spacing:.07em; margin-bottom:7px; }
+.opd-shell .cho-main .patient-modal > header p { font-size:12px; color:#718396; margin:7px 0 0; }
+.opd-shell .cho-main .patient-modal > header > button { width:32px; height:32px; flex-shrink:0; border:0; border-radius:6px; background:#eaf4fc; color:#176baf; }
+.opd-shell .cho-main .patient-modal .patient-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 20px; padding:24px; }
+.opd-shell .cho-main .patient-modal .patient-form > label { display:flex; flex-direction:column; align-items:stretch; gap:8px; padding:0; margin:0; border:0; min-height:0; }
+.opd-shell .cho-main .patient-modal .patient-form > .full,
+.opd-shell .cho-main .patient-modal .patient-form > .patient-alert { grid-column:1 / -1; }
+.opd-shell .cho-main .patient-modal .patient-form label > span { justify-self:start; color:#647e94; font-size:11px; font-weight:500; }
+.opd-shell .cho-main .patient-modal :is(.patient-form,.cho-assign-doctor-form) :is(input:not([type="radio"]):not([type="checkbox"]),select,textarea) { width:100%; min-width:0; min-height:38px; border:1px solid #cddfeb; border-radius:5px; padding:9px 10px; background:#fff; color:#34495e; font:inherit; font-size:13px; }
+.opd-shell .cho-main .patient-modal input[readonly] { background:#f3f7fa; color:#647e94; }
+.opd-medical-section { grid-column:1 / -1; margin:0; padding:10px 12px; border:1px solid #d4e3ef; border-radius:4px; background:#f0f6fb; color:#234e70; font-size:12px; font-weight:650; text-transform:uppercase; letter-spacing:.035em; }
+.opd-shell .cho-main .patient-modal .referral-log { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); padding:24px; gap:0; }
+.opd-shell .cho-main .patient-modal .referral-log > p { margin:0; padding:13px; border:1px solid #e0eaf3; font-size:12px; color:#40566b; line-height:1.6; overflow-wrap:anywhere; }
+.opd-shell .cho-main .patient-modal .referral-log > p > strong { display:block; font-size:10px; color:#8190a0; font-weight:500; margin-bottom:5px; }
+.opd-shell .cho-main .patient-modal .referral-log > div { grid-column:1 / -1; padding:14px; border:1px solid #e0eaf3; background:#f7fbff; }
+.opd-shell .cho-main .patient-modal .cho-referral-form-view { padding:24px; gap:0; }
+.opd-shell .cho-main .patient-modal .cho-referral-form-view > div { padding:14px; border:1px solid #e0eaf3; border-radius:0; background:#fff; }
+.opd-shell .cho-main .patient-modal .cho-referral-form-view span { display:block; color:#8190a0; font-size:10px; margin-bottom:6px; }
+.opd-shell .cho-main .patient-modal .cho-referral-form-view strong { color:#40566b; font-size:12px; font-weight:500; }
+.opd-shell .cho-main .patient-modal .cho-assign-doctor-form { padding:24px; }
+.opd-shell .cho-main .assign-patient-summary { border:1px solid #cfe2f2; border-radius:6px; background:#edf6fd; padding:14px; margin-bottom:20px; }
+.opd-shell .cho-main .cho-assign-doctor-form > label { display:grid; gap:8px; margin:0 0 20px; }
+.opd-shell .cho-main .cho-assign-doctor-form fieldset { padding:16px; border:1px solid #d4e3ef; border-radius:5px; margin:0 0 20px; }
+.opd-shell .cho-main .cho-assign-doctor-form legend { padding:0 7px; color:#234e70; font-size:12px; font-weight:600; }
+.opd-shell .cho-main .cho-assign-doctor-form fieldset label { display:flex; align-items:center; gap:9px; padding:10px; border-bottom:1px solid #edf2f6; color:#40566b; font-size:12px; }
+.opd-shell .cho-main input[type="radio"] { accent-color:#176baf; }
+.opd-shell .cho-main .patient-modal .patient-form-actions { grid-column:1 / -1; display:flex; justify-content:flex-end; gap:12px; padding:18px 24px; margin:0; border-top:1px solid #dce9f3; }
+.opd-shell .cho-main .patient-modal form .patient-form-actions { padding:18px 0 0; }
+.opd-shell .cho-main .patient-modal .patient-form-actions button { min-height:40px; padding:9px 18px; border:1px solid #c8ddeb; border-radius:6px; background:#fff; color:#607589; font-family:inherit; font-size:12px; }
+.opd-shell .cho-main .patient-modal .patient-form-actions button[type="submit"] { border-color:#176baf; background:#176baf; color:#fff; }
+@media(max-width:600px) { .opd-shell .cho-main .patient-modal .patient-form, .opd-shell .cho-main .patient-modal .referral-log { grid-template-columns:1fr; padding:18px; } .opd-shell .cho-main .patient-modal .cho-referral-form-view { padding:18px; } .opd-shell .cho-main .patient-modal > header { padding:18px; } }

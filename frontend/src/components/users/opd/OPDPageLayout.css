@@ -1,0 +1,99 @@
+/* Only OPD content pages opt in; the dashboard and other roles share none of these overrides. */
+.opd-shell .cho-main {
+  --opd-primary: #176baf;
+  --opd-secondary: #edf6fd;
+  --opd-border: #b8d5eb;
+}
+.opd-shell .cho-main.opd-content-page .opd-incoming-modern .cho-incoming-page {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+.opd-shell .cho-main.opd-content-page.opd-referral-ui :is(.opd-incoming-modern, .opd-manage-referrals.opd-referral-list-layout) .cho-filter-panel {
+  display: flex;
+  position: static;
+  width: auto;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 14px 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.opd-shell .cho-main.opd-content-page.opd-referral-ui .opd-manage-referrals.opd-referral-list-layout .cho-filter-panel {
+  padding-block: 8px 18px;
+  gap: 16px 20px;
+}
+.opd-shell .cho-main.opd-content-page .opd-incoming-modern .cho-incoming-menu {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.opd-shell .cho-main.opd-content-page .opd-incoming-modern .cho-incoming-title {
+  margin: 0 0 12px;
+}
+.opd-shell .cho-main.opd-content-page.opd-referral-ui .cho-filter-panel > h2 {
+  display: block; order: -3; flex: 0 0 100%; margin: 0; padding: 0 0 14px;
+  border-bottom: 1px solid #e5edf4; font-size: 16px;
+}
+.opd-shell .cho-main.opd-content-page.opd-referral-ui :is(.opd-incoming-modern, .opd-referral-list-layout) .cho-filter-panel > label {
+  display: grid; gap: 7px; flex: 1 1 145px; min-width: 0; margin: 0;
+}
+.opd-shell .cho-main.opd-content-page.opd-referral-ui :is(.opd-incoming-modern, .opd-referral-list-layout) .cho-filter-panel > label:first-of-type { flex: 2 1 220px; }
+.opd-shell .cho-main.opd-content-page.opd-referral-ui .cho-filter-panel label > span { font-size: 14px; color: #405b71; margin: 0; }
+.opd-shell .cho-main.opd-content-page.opd-referral-ui .cho-filter-panel label :is(select, input, div) { min-width: 0; font-size: 15px; }
+.opd-shell .cho-main.opd-content-page.opd-referral-ui .cho-filter-panel label > :is(select, div) { min-height: 44px; }
+.opd-shell .cho-main.opd-content-page.opd-referral-ui .cho-filter-panel > .filter-button { width: auto; min-height: 44px; margin: 0; }
+.opd-shell .opd-content-page .cho-incoming-menu {
+  flex: 0 0 100%; display: flex; flex-wrap: wrap; align-items: center;
+  gap: 8px; margin: 0; padding-top: 12px; border-top: 1px solid #dce6ef;
+}
+.opd-shell .opd-content-page .cho-incoming-menu h2 { margin: 0 10px 0 0; border: 0; padding: 0; }
+.opd-shell .opd-content-page .cho-incoming-menu a { width: auto; padding: 8px 12px; }
+.opd-shell .cho-main.opd-content-page :is(.cho-incoming-content,.cho-patient-list-panel,.reports-main,.notifications-list,.profile-card,.cho-settings-panel) { min-width: 0; }
+.opd-shell .cho-main.opd-content-page .patient-modal {
+  width: min(1200px, 100%); max-height: calc(100dvh - 40px); overflow-y: auto;
+}
+.opd-shell .cho-main.opd-content-page .patient-modal > header { padding: 18px 24px; }
+.opd-shell .cho-main.opd-content-page :is(.cho-settings-panel,.profile-card,.reports-main,.reports-table-card) { border-radius: 8px; }
+.opd-shell .cho-main .cho-panel .role-panel-action,
+.opd-shell .cho-main.opd-content-page :is(.filter-button,.view-all-button,.primary-action-button,.cho-request-actions button,.patient-form-actions button,.medicine-form-actions button,.reports-actions button,.reports-back-button,.notifications-page-heading button,.cho-settings-form button,.cho-status-toggle button,.patient-modal > header button) {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  min-height: 40px; padding: 8px 14px; border: 1px solid var(--opd-border);
+  border-radius: 6px; color: var(--opd-primary); background: var(--opd-secondary);
+  font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.opd-shell .cho-main.opd-content-page :is(.primary-action-button,.patient-form-actions button[type=submit],.medicine-form-actions button[type=submit],.cho-settings-form button[type=submit],.cho-status-toggle button.active,.notifications-page-heading button) {
+  background: var(--opd-primary); border-color: var(--opd-primary); color: white;
+}
+.opd-shell .cho-main.opd-content-page button:disabled { opacity: .55; cursor: not-allowed; }
+.opd-shell .cho-main.opd-content-page :is(button,a,select,input):focus-visible { outline: 2px solid var(--opd-primary); outline-offset: 2px; }
+@media(max-width: 650px) {
+  .opd-shell .cho-main.opd-content-page.opd-referral-ui :is(.opd-incoming-modern,.opd-referral-list-layout) .cho-filter-panel > label,
+  .opd-shell .cho-main.opd-content-page.opd-referral-ui :is(.opd-incoming-modern,.opd-referral-list-layout) .cho-filter-panel > label:first-of-type { flex-basis: 100%; }
+  .opd-shell .cho-main.opd-content-page.opd-referral-ui .cho-filter-panel > button { width: 100%; }
+  .opd-shell .opd-content-page .cho-incoming-menu h2 { flex-basis: 100%; }
+}
+
+@media (min-width: 900px) {
+  .opd-shell .opd-incoming-modern .cho-incoming-card .incoming-card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 18px;
+  }
+  .opd-shell .opd-incoming-modern .incoming-card-body header { grid-column: 1 / -1; padding-bottom: 6px; }
+  .opd-shell .opd-incoming-modern .opd-incoming-metadata { margin: 0; }
+  .opd-shell .opd-incoming-modern .incoming-card-actions { justify-content: flex-end; padding: 0; margin: 0; }
+}
+
+.opd-shell .cho-main .cho-panel .role-panel-action {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  margin: 12px 16px 16px;
+}
+.opd-shell .cho-main .cho-panel .role-panel-action:hover {
+  background: #dceefa;
+}

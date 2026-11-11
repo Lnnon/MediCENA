@@ -1,0 +1,58 @@
+/* Patient-only visual consistency; page content and workflows remain unchanged. */
+.patient-workspace .patient-main { color:#374c60; background:#f3f8fc; font-size:13px; }
+.patient-workspace .patient-main .patient-page-heading h1 { margin:5px 0; color:#303f50; font-size:23px; font-weight:650; }
+.patient-workspace .patient-main .patient-page-heading p { color:#718396; font-size:12px; line-height:1.6; }
+.patient-workspace .patient-main :is(.patient-panel,.patient-referral-card,.patient-settings-panel,.patient-referral-filter) { border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; min-width:0; }
+.patient-workspace .patient-main :is(.patient-panel-heading,.patient-settings-heading) { padding-bottom:16px; border-bottom:1px solid #e5edf4; color:#176baf; }
+.patient-workspace .patient-main :is(.patient-panel-heading,.patient-settings-heading) h2 { color:#374c60; font-size:16px; font-weight:600; }
+.patient-workspace .patient-main :is(.patient-panel-heading,.patient-settings-heading) p { color:#718396; font-size:12px; line-height:1.6; }
+.patient-workspace .patient-main .patient-panel-heading span { color:#8190a0; font-size:10px; }
+.patient-workspace .patient-main .patient-date-card { border:1px solid #dce9f3; border-radius:6px; background:#fff; color:#176baf; font-size:12px; }
+.patient-workspace .patient-main .patient-stat-card { border:1px solid #dce6ef; border-radius:7px; background:#fff; box-shadow:none; }
+.patient-workspace .patient-main .patient-stat-icon { color:#176baf; background:#eaf4fc; border-radius:8px; }
+.patient-workspace .patient-main .patient-stat-card > span { font-size:11px; color:#718396; font-weight:500; }
+.patient-workspace .patient-main .patient-stat-card > strong { font-size:25px; color:#234e70; font-weight:650; }
+.patient-workspace .patient-main .patient-table { gap:0; border:1px solid #e0e7ee; border-radius:5px; overflow:hidden; }
+.patient-workspace .patient-main .patient-table-row { padding:15px 12px; border:0; border-bottom:1px solid #e6ebf0; border-radius:0; background:#fff; align-items:center; }
+.patient-workspace .patient-main .patient-table-row:last-child { border-bottom:0; }
+.patient-workspace .patient-main .patient-table-row strong { color:#374c60; font-size:12px; font-weight:600; }
+.patient-workspace .patient-main .patient-table-row div > span, .patient-workspace .patient-main .patient-table-row time { font-size:11px; color:#7b8896; }
+.patient-workspace .patient-main .status { border-radius:5px; font-size:10px; font-weight:500; }
+.patient-workspace .patient-main .patient-info { padding:16px; border:1px solid #dce9f3; border-radius:6px; background:#f5faff; }
+.patient-workspace .patient-main .patient-info > strong { font-size:17px; color:#234e70; font-weight:600; }
+.patient-workspace .patient-main .patient-info p { color:#718396; font-size:12px; line-height:1.7; }
+.patient-workspace .patient-main .patient-referral-card > header { border-bottom:1px solid #dce9f3; background:#f5faff; }
+.patient-workspace .patient-main .patient-referral-card h2 { font-size:17px; color:#374c60; font-weight:600; }
+.patient-workspace .patient-main .patient-referral-details > div { padding:13px; border:1px solid #e0eaf3; border-radius:5px; background:#f7fbff; }
+.patient-workspace .patient-main .patient-referral-details span { font-size:11px; color:#8190a0; }
+.patient-workspace .patient-main .patient-referral-details strong { font-size:12px; color:#40566b; font-weight:500; overflow-wrap:anywhere; }
+.patient-workspace .patient-main .patient-referral-note { border-color:#cfe2f2; border-radius:6px; background:#eff7fd; color:#235a84; font-size:12px; line-height:1.6; }
+.patient-workspace .patient-main :is(.patient-referral-filter,.patient-request-form,.patient-settings-form) label > span { font-size:12px; color:#405b71; }
+.patient-workspace .patient-main :is(.patient-referral-filter,.patient-request-form,.patient-settings-form) :is(input:not([type="radio"]):not([type="checkbox"]),select,textarea) { width:100%; min-width:0; min-height:40px; padding:9px 12px; border:1px solid #d4e3ef; border-radius:6px; background:#fff; color:#34495e; font-family:inherit; font-size:13px; }
+.patient-workspace .patient-main .patient-request-form input[type="file"] { height:auto; padding:9px; background:#f7fbff; }
+.patient-workspace .patient-main input[type="file"]::file-selector-button { margin-right:10px; border:1px solid #bfdcf0; border-radius:4px; padding:6px 9px; background:#eaf4fc; color:#176baf; cursor:pointer; }
+.patient-workspace .patient-main :is(.patient-request-form,.patient-settings-form) button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:38px; padding:9px 16px; border:1px solid #176baf; border-radius:6px; background:#176baf; color:#fff; font-family:inherit; font-size:12px; font-weight:600; }
+.patient-workspace .patient-main :is(.patient-referral-row-actions button,.patient-referral-filter button,.patient-prescription-link) { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:34px; padding:7px 12px; border:1px solid #bfdcf0; border-radius:6px; background:#eaf4fc; color:#176baf; font-family:inherit; font-size:12px; font-weight:600; }
+.patient-workspace .patient-main .patient-request-card { padding:16px; border:1px solid #dce6ef; border-radius:6px; box-shadow:none; background:#fff; }
+.patient-workspace .patient-main .patient-request-card strong { font-size:13px; color:#374c60; font-weight:600; }
+.patient-workspace .patient-main .patient-request-card p { font-size:12px; line-height:1.6; color:#718396; }
+.patient-workspace .patient-main :is(.patient-request-steps,.patient-referral-steps) { overflow-x:auto; }
+.patient-workspace .patient-main .patient-modal { width:min(820px,100%); max-height:calc(100dvh - 36px); border:1px solid #c8dbe9; border-radius:10px; box-shadow:0 24px 70px #17395c30; }
+.patient-workspace .patient-main .patient-modal > header { padding:18px 22px; background:#f5faff; border-bottom:2px solid #176baf; }
+.patient-workspace .patient-main .patient-modal header h2 { font-size:19px; font-weight:600; color:#234e70; }
+.patient-workspace .patient-main .patient-referral-detail-body > div { border:1px solid #e0eaf3; border-radius:5px; background:#fff; padding:13px; }
+.patient-workspace .patient-main .patient-referral-detail-body span { font-size:10px; color:#8190a0; }
+.patient-workspace .patient-main .patient-referral-detail-body strong { font-size:12px; color:#40566b; font-weight:500; }
+.patient-workspace .patient-main .patient-settings-icon { border-radius:8px; background:#eaf4fc; color:#176baf; }
+.patient-workspace .patient-main .patient-status-card { border:1px solid #dce9f3; border-radius:6px; background:#f5faff; }
+.patient-workspace .patient-main .patient-status-toggle button { min-height:36px; border-radius:6px; font-size:12px; }
+.patient-workspace .patient-main .patient-status-toggle button.active:not(.danger) { background:#176baf; border-color:#176baf; color:#fff; }
+.patient-workspace .patient-main :is(.patient-settings-message,.patient-request-message) { border-radius:6px; font-size:12px; line-height:1.6; }
+.patient-workspace .patient-main .notifications-page { color:#374c60; }
+.patient-workspace .patient-main .notifications-page-heading h1 { font-size:23px; font-weight:650; color:#303f50; }
+.patient-workspace .patient-main .notification-row { border:1px solid #dce6ef; border-radius:6px; background:#fff; box-shadow:none; }
+.patient-workspace .patient-main .notification-row.is-unread { border-color:#bfdcf0; background:#eff7fd; }
+.patient-workspace .patient-main .notification-row-icon { background:#eaf4fc; color:#176baf; }
+.patient-workspace .patient-main button:focus-visible, .patient-workspace .patient-main input:focus-visible, .patient-workspace .patient-main textarea:focus-visible { outline:2px solid #4296d2; outline-offset:2px; }
+.patient-workspace .patient-main button:disabled { opacity:.6; cursor:not-allowed; }
+@media(max-width:600px) { .patient-workspace .patient-main .patient-table-row { gap:10px; flex-wrap:wrap; } .patient-workspace .patient-main .patient-request-form button { width:100%; } }

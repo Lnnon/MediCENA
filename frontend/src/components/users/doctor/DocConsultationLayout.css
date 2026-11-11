@@ -1,0 +1,139 @@
+.doc-consultation-status-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.doc-consultation-status-cards button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 80px;
+  padding: 18px;
+  border: 1px solid #dce6ef;
+  border-radius: 6px;
+  background: #fff;
+  color: #607589;
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+.doc-consultation-status-cards button:hover { border-color: #8ebce0; }
+.doc-consultation-status-cards button[aria-pressed='true'] { border-color: #176baf; box-shadow: inset 0 -3px #176baf; }
+.doc-consultation-status-cards button:focus-visible { outline: 2px solid #176baf; outline-offset: 3px; }
+.doc-consultation-stat-icon { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border-radius: 4px; background: #edf6ff; color: #3284ed; }
+.doc-consultation-status-cards [data-status='pending'] .doc-consultation-stat-icon { background: #fff7e4; color: #ac7913; }
+.doc-consultation-status-cards [data-status='completed'] .doc-consultation-stat-icon { background: #e9f8ef; color: #20b75b; }
+.doc-consultation-stat-label { flex: 1; line-height: 1.5; }
+.doc-consultation-status-cards strong { color: #234e70; font-size: 24px; font-weight: 650; }
+.doc-consultation-page.doc-consultation-organized { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.doc-consultation-organized .doc-consultation-queue { padding: 18px; border-radius: 7px; }
+.doc-consultation-organized .doc-consultation-queue h2 { padding-bottom: 14px; margin-bottom: 16px; border-bottom: 1px solid #e5edf4; }
+.doc-consultation-organized .doc-consultation-filters { grid-template-columns: minmax(180px, 2fr) minmax(150px, 1fr) minmax(170px, 1fr) auto; gap: 16px; align-items: end; margin: 0; }
+.doc-consultation-organized .doc-consultation-filters label { min-width: 0; font-weight: 500; }
+.doc-consultation-organized .doc-consultation-filters input { min-width: 0; }
+.doc-consultation-organized .doc-consultation-filters .filter-button { min-height: 36px; padding: 8px 14px; background: #edf6fd; border: 1px solid #bfdcf0; color: #176baf; border-radius: 6px; justify-content: center; }
+.doc-consultation-organized .doc-consultation-workspace { min-width: 0; }
+@media (max-width: 1000px) {
+  .doc-consultation-organized .doc-consultation-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .doc-consultation-status-cards,
+  .doc-consultation-organized .doc-consultation-filters { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Larger controls and dropdown targets for the consultation workflow. */
+.doc-consultation-organized .doc-consultation-filters label { font-size: 14px; gap: 8px; }
+.doc-consultation-organized .doc-consultation-filters label > div { min-height: 46px; height: auto; border-radius: 6px; }
+.doc-consultation-organized .doc-consultation-filters label > div input { min-height: 44px; font-size: 16px; }
+.doc-consultation-organized .doc-consultation-filters label > .medicine-combobox { display: block; padding: 0; position: relative; }
+.doc-consultation-organized .doc-consultation-filters .medicine-combobox input[role='combobox'] { width: 100%; padding: 10px 44px 10px 12px; box-sizing: border-box; }
+.doc-consultation-organized .medicine-combobox-clear { width: 40px; height: 40px; font-size: 22px; }
+.doc-consultation-organized .doc-consultation-filters .filter-button { min-height: 46px; font-size: 14px; }
+.doc-consultation-organized .doc-consultation-filters label > div:focus-within { outline: 2px solid #176baf; outline-offset: 2px; }
+.doc-barangay-options [role='option'] { min-height: 44px; padding: 12px 14px; box-sizing: border-box; font-size: 16px; }
+.doc-consultation-filter-summary { margin: 8px 0 0; color: #607589; font-size: 14px; line-height: 1.5; }
+.doc-consultation-status-cards button { font-size: 14px; }
+
+.doc-patient-page.doc-consultation-organized { grid-template-columns: minmax(0, 1fr); }
+.doc-patient-page.doc-consultation-organized .doc-patient-list-panel { min-width: 0; padding: 20px; border-radius: 7px; }
+.doc-patient-page.doc-consultation-organized .doc-consultation-filter-summary { margin-bottom: 18px; }
+
+.doc-referral-page.doc-referrals-organized { grid-template-columns: minmax(0, 1fr); }
+.doc-referrals-organized .doc-consultation-filters { grid-template-columns: minmax(180px, 2fr) minmax(160px, 1fr) minmax(170px, 1fr) auto; }
+.doc-referrals-organized .doc-consultation-filters select { min-height: 46px; font-size: 16px; }
+.doc-referrals-organized .doc-patient-list-panel { min-width: 0; padding: 20px; border-radius: 7px; gap: 0; }
+.doc-referrals-organized .doc-consultation-filter-summary { margin-bottom: 18px; }
+.doc-referrals-organized .doc-referral-list-table { width: 100%; min-width: 1050px; }
+.doc-referrals-organized .doc-referral-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; }
+.doc-referral-name-button { border: 0; background: transparent; padding: 5px 0; color: #176baf; text-align: left; font: inherit; font-weight: 600; cursor: pointer; }
+.doc-referral-name-button:focus-visible { outline: 2px solid #176baf; outline-offset: 3px; }
+.doc-referral-list-table td .doc-referral-list-status { display: inline-block; padding: 6px 10px; border-radius: 5px; background: #edf6fd; color: #176baf; }
+.doc-referral-list-table td .doc-referral-list-status[data-status='pending'] { background: #fff7e4; color: #926512; }
+.doc-referral-list-table td .doc-referral-list-status[data-status='accepted'], .doc-referral-list-table td .doc-referral-list-status[data-status='completed'] { background: #e9f8ef; color: #237548; }
+.doc-referral-list-table td .doc-referral-list-status[data-status='cancelled'] { background: #fff0f0; color: #a83333; }
+@media (max-width: 1100px) { .doc-referrals-organized .doc-consultation-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .doc-referrals-organized .doc-consultation-filters { grid-template-columns: minmax(0, 1fr); } }
+
+.patient-modal.doc-referral-modal.doc-referral-landscape {
+  width: min(1280px, calc(100vw - 48px));
+  max-height: calc(100dvh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #c8dbe9;
+  border-radius: 10px;
+}
+.patient-modal.doc-referral-landscape > header {
+  flex-shrink: 0;
+  padding: 20px 24px;
+  min-height: 72px;
+  background: #f5faff;
+  border-bottom: 1px solid #dce9f3;
+}
+.doc-referral-landscape .doc-referral-form-view {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding: 24px;
+  min-height: 0;
+  overflow-y: auto;
+}
+.doc-referral-landscape .doc-referral-form-view > div { padding: 16px; border-color: #dce9f3; border-radius: 6px; }
+.doc-referral-landscape .doc-referral-form-view .wide { grid-column: span 2; }
+.doc-referral-landscape .doc-referral-form-view dt { font-size: 13px; }
+.doc-referral-landscape .doc-referral-form-view dd { margin-top: 8px; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.doc-referral-landscape .doc-referral-modal-actions { flex-shrink: 0; padding: 18px 24px; gap: 12px; border-top: 1px solid #dce9f3; }
+.doc-referral-landscape .doc-referral-modal-actions button { min-height: 42px; padding: 10px 18px; border-radius: 6px; font-size: 14px; }
+.doc-referral-landscape .doc-referral-modal-actions .secondary-action-button { background: #edf6fd; color: #176baf; border: 1px solid #b8d5eb; }
+.doc-referral-landscape .doc-referral-modal-actions .success-action-button { background: #176baf; color: #fff; border: 1px solid #176baf; }
+.doc-referral-landscape .doc-referral-modal-actions .secondary-action-button:hover { background: #dceefb; }
+.doc-referral-landscape .doc-referral-modal-actions .success-action-button:hover { background: #12578f; }
+.doc-referral-landscape button:focus-visible { outline: 2px solid #176baf; outline-offset: 3px; }
+@media (max-width: 1000px) { .doc-referral-landscape .doc-referral-form-view { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .patient-modal.doc-referral-modal.doc-referral-landscape { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
+  .doc-referral-landscape .doc-referral-form-view { grid-template-columns: minmax(0, 1fr); padding: 18px; }
+  .doc-referral-landscape .doc-referral-form-view .wide { grid-column: auto; }
+  .doc-referral-landscape .doc-referral-modal-actions { flex-wrap: wrap; padding: 18px; }
+}
+
+.doc-shell .patient-modal.doc-consultation-modal {
+  width: min(1400px, calc(100vw - 32px)); max-height: calc(100dvh - 32px);
+  display: flex; flex-direction: column; overflow: hidden; border-radius: 10px;
+}
+.doc-shell .doc-consultation-modal > header { padding: 16px 24px; background: #f5faff; flex-shrink: 0; }
+.doc-shell .doc-consultation-modal > .doc-consultation-summary { padding: 14px 24px; flex-shrink: 0; }
+.doc-shell .doc-consultation-modal-grid { overflow-y: auto; min-height: 0; padding: 20px 24px; gap: 16px; }
+.doc-shell .doc-consultation-modal > footer { display: flex; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; gap: 10px; margin: 0; padding: 14px 24px; border-top: 1px solid #dce9f3; }
+.doc-consultation-modal > footer [role='alert'] { margin-right: auto; }
+@media (min-width: 1100px) {
+  .doc-shell .doc-consultation-modal-grid .doc-consultation-form { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.doc-accept-confirmation { width: min(500px, calc(100vw - 32px)); box-sizing: border-box; padding: 24px; border: 1px solid #c8dbe9; border-radius: 10px; color: #374c60; background: white; box-shadow: 0 22px 70px #17395c33; }
+.doc-accept-confirmation::backdrop { background: rgba(23,57,92,.38); }
+.doc-accept-confirmation h2 { margin: 0; font-size: 20px; }
+.doc-accept-confirmation p { margin: 14px 0 22px; line-height: 1.6; }
+.doc-accept-confirmation footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.doc-shell .doc-accept-confirmation .secondary-action-button, .doc-shell .doc-consultation-modal footer .secondary-action-button { background: #edf6fd; color: #176baf; border-color: #b8d5eb; }
+.doc-consultation-organized > .doc-page-filter-row { padding-block: 8px 12px; }
